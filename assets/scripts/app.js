@@ -1,17 +1,27 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
-function add(num1, num2) {
-  const result = num1 + num2;
-  alert("The result is " + result);
+function getUserInputNumber() {
+  return parseInt(userInput.value);
 }
 
-add(1, 2);
-add(5, 5)
+function createAndWriteOutput(operator, resultBeforeCalc, CalcNumber) {
+  const calcDescription = `${currentResult} ${operator} ${enteredNumber}`;
+  outputResult(currentResult, calcDescription);
+}
+function add() {
+  const enteredNumber = getUserInputNumber();
+  const initialResult = currentResult;
+  currentResult = currentResult + enteredNumber;
+  createAndWriteOutput("+", currentResult, enteredNumber);
+}
 
-currentResult = ((currentResult + 10) * 3) / 2 - 1;
-
-let calculationDescription = `( ${defaultResult} + 10) * 3 / 2 - 1`;
-
-outputResult(currentResult, calculationDescription);
-
+function subtract() {
+  const enteredNumber = getUserInputNumber();
+  const initialResult = currentResult;
+  currentResult = currentResult - enteredNumber;
+  createAndWriteOutput("-", currentResult, enteredNumber);
+}
+function multiply() {}
+function divide() {}
+addBtn.addEventListener("click", add);
