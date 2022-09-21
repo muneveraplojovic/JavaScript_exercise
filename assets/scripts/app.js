@@ -30,6 +30,14 @@ function add() {
   writeToLog("add", initialResult, enteredNumber, currentResult);
 }
 
+function divide(){
+  const enteredNumber=getUserInputNumber()
+  const initialResult=currentResult
+  currentResult+=enteredNumber
+  createAndWriteOutput("-", initialResult, enteredNumber)
+  writeToLog("divide", initialResult, enteredNumber, currentResult)
+}
+
 function subtract() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
@@ -58,3 +66,6 @@ addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
+
+
+
