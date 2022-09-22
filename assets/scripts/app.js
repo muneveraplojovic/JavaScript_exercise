@@ -46,6 +46,14 @@ function subtract() {
   writeToLog("subtract", initialResult, enteredNumber, currentResult);
 }
 
+function subtract() {
+  const enteredNumber = getUserInputNumber();
+  const initialResult = currentResult;
+  currentResult -= enteredNumber;
+  createAndWriteOutput("-", initialResult, enteredNumber);
+  writeToLog("subtract", initialResult, enteredNumber, currentResult);
+}
+
 function multiply() {
   const enteredNumber = getUserInputNumber();
   const initialResult = currentResult;
