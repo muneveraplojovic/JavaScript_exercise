@@ -1,0 +1,30 @@
+#container{
+    width: 300px;
+    height: 400px;
+    border: solid grey 1px;
+    border-radius: 10px;
+    background-color: darkcyan;
+    margin: auto;
+    padding: 20px;
+}
+
+#para{
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    text-align: center;
+}
+*{
+    box-sizing: border-box;
+}
+#slika{
+    width: 250px;
+    height: 200px;
+    justify-content: center;
+}
+
+p{
+    font-size: small;
+    color: aliceblue;
+    text-align: center;
+    
+}
