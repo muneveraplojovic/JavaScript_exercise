@@ -6,13 +6,13 @@ let counter = document.getElementById("counter");
 
 let count = 0;
 
+decrease.addEventListener('click', ()=>{
+   count--
+   counter.innerHTML = count
+})
+
 increase.addEventListener('click', ()=>{
     count++
-    counter.innerHTML = count
- })
-
- decrease.addEventListener('click', ()=>{
-    count--
     counter.innerHTML = count
  })
 
@@ -22,7 +22,7 @@ increase.addEventListener('click', ()=>{
  })
 
     
-    // buttons.forEach((b) => {
+   //  buttons.forEach((b) => {
     //   b.addEventListener("click", (e) => {
     //     let target = e.currentTarget.classList;
     
