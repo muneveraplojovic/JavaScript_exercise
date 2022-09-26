@@ -1,0 +1,113 @@
+body{
+    background-color: rgb(231, 229, 229);
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+#calculator{
+    width: 265px;
+    height: 420px;
+    background-color: rgba(108, 105, 145, 0.589);
+    margin:0 auto;
+    top: 20px;
+    position: relative;
+    border-radius: 10px;
+
+}
+h1{
+text-align: center;
+margin: 40px;
+}
+
+#results{
+    height: 20%;
+    background-color: transparent;
+}
+#keyboard{
+    height: 80%;
+    background-color: transparent;
+    
+}
+.operator, .number, .empty{
+    width: 40px;
+    height: 40px;
+    margin: 13px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-size:19px ;
+    color: rgb(63, 62, 61);
+}
+
+#history{
+    text-align: right;
+    height: 30%;
+    padding-top: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    color: rgb(49, 48, 48);
+    background-color: transparent;
+    margin: 0;
+}
+#output{
+    text-align: right;
+    height: 80%;
+    font-size: 19px;
+    margin: 0;
+    background-color: transparent;
+    padding-right: 25px;
+    color: beige;
+}
+.number, .empty{
+    background-color: transparent;
+}
+.number, .operator{
+    cursor: pointer;
+}
+.operator:active, .number:active{
+    font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+    outline: 0;
+}
+.operator:nth-child(4){
+    font-size: 19px;
+    background-color: rgb(136, 85, 94);
+}
+.operator:nth-child(8){
+    font-size: 19px;
+    background-color: rgb(78, 150, 96);
+}
+.operator:nth-child(12){
+    font-size: 19px;
+    background-color: rgb(158, 101, 79);
+}
+.operator:nth-child(16){
+    font-size: 19px;
+    background-color: rgb(165, 72, 72);
+}
+.operator:nth-child(20){
+    font-size: 19px;
+    background-color: rgb(158, 156, 91);
+}
+.operator:nth-child(1){
+    font-size: 19px;
+    background-color: rgb(92, 92, 92);
+}
+.operator:nth-child(2){
+    font-size: 19px;
+    background-color: rgb(202, 198, 88);
+}
+.operator:nth-child(3){
+    font-size: 19px;
+    background-color: rgb(99, 84, 139);
+}
+
+button.operator:hover{
+    background-color: rgba(128, 128, 128, 0.281);
+}
+button.number:hover{
+    background-color: rgba(128, 128, 128, 0.281);
+
+}
