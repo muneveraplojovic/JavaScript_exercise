@@ -1,12 +1,6 @@
-alert("testing")
-console.log("Hello Wold!");
-
-import React from 'react'
-
-function script() {
-  return (
-    <div>script</div>
-  )
+function display(){
+    const outputValue = document.getElementById("output-value").innerHTML("001474")
+    console.log(outputValue);
 }
 
-export default script
+display()
