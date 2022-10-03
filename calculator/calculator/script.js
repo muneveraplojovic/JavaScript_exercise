@@ -7,6 +7,18 @@ function display(){
     import React from 'react'
     import { connect } from 'react-redux'
     
+    import React from 'react'
+    import PropTypes from 'prop-types'
+    
+    const script = props => {
+      return (
+        <div>script</div>
+      )
+    }
+    
+    script.propTypes = {}
+    
+    export default script
     export const script = (props) => {
       return (
         <div>script</div>
