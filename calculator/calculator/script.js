@@ -1,7 +1,7 @@
-function display() {
-    alert("Hello wold!")
-    console.log("Hi, how are you?");
-    console.log("hi!!")
+const btn = document.querySelector(".btn")
+
+function alertBox (){
+    alert("Aferin saba, basardin!!!!")
 }
 
-display();
+btn.addEventListener("click", alertBox)
