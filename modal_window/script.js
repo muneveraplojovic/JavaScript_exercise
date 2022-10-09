@@ -1,55 +1,33 @@
-//elements
-let firstMainBtn = document.querySelector(".btn-main-1st");
-let secondMainBtn = document.querySelector(".btn-main-2nd");
-//first two main buttons
+let leftMainBtn = document.querySelector(".btn-main-1st");
+let rightMainBtn = document.querySelector(".btn-main-2nd");
+let yesBtn = document.querySelector(".btn-modal-1st");
+let notBtn = document.querySelector(".not-yet");
+let exitBtn = document.querySelector(".exit-btn");
+let lastBtn = document.querySelector(".btn-modal-2nd");
 let firstModal = document.querySelector(".first-modal");
 let secondModal = document.querySelector(".second-modal");
-let exitBtn = document.querySelector(".exit-btn");
-let container=document.querySelector(".container")
 
+leftMainBtn.addEventListener("click", function(){
+    firstModal.classList.remove("first-modal")
+})
 
-// Functions
-function showFirstModal() {
-    mainModal.classList.remove('hidden-first');
-};
+rightMainBtn.addEventListener("click", function(){
+    firstModal.classList.remove("first-modal")
+})
 
-function showSecondModal() {
-    mainModal.classList.add('hidden-first');
-    secondModal.classList.remove('hidden-second');
-};
+yesBtn.addEventListener("click", function(){
+    firstModal.classList.add("first-modal")
+    secondModal.classList.remove("second-modal")
+})
 
-function hideFirstModal() {
-    mainModal.classList.add('hidden-first');
-};
+notBtn.addEventListener("click", function(){
+    firstModal.classList.add("first-modal")
+})
 
-function hideSecondModal() {
-    secondModal.classList.add('hidden-second');
-};
+lastBtn.addEventListener("click", function(){
+    secondModal.classList.add("second-modal")
+})
 
-window.onclick = function (event) {
-    if (event.target === mainModal) {
-        hideFirstModal();
-    } else if (event.target === secondModal) {
-        hideSecondModal();
-    }
-}
-
-window.onkeydown = function (event) {
-    if (event.keyCode == 27) {
-        hideFirstModal();
-        hideSecondModal();
-    }
-}
-
-// Event listeners
-btnRed.addEventListener('click', showFirstModal);
-
-btnBlue.addEventListener('click', showFirstModal);
-
-btnConfirm.addEventListener('click', showSecondModal);
-
-btnClose.addEventListener('click', hideFirstModal);
-
-btnExit.addEventListener('click', hideFirstModal);
-
-btnCloseMessage.addEventListener('click', hideSecondModal);
+exitBtn.addEventListener("click", function(){
+    firstModal.classList.add("first-modal")
+})

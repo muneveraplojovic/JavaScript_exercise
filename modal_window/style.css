@@ -1,11 +1,11 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(184, 184, 219, 0.849);
+    background-color: rgb(184, 184, 219);
+    overflow-y: hidden;
 }
 
 .container{
@@ -13,8 +13,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(167, 167, 167, 0.692);
-    border: 0.5px rgba(211, 207, 207, 0.705) solid;
+    background-color: rgb(167, 167, 167);
+    border: 0.5px rgb(211, 207, 207) solid;
     border-radius: 10%;
     width: 300px;
     height: 300px;
@@ -44,54 +44,79 @@ body{
 }
 .btn-main-1st:hover,
 .btn-main-2nd:hover{
-    background-color: rgba(148, 148, 170, 0.712);
+    background-color: rgb(148, 148, 170);
 }
 
- .second-modal{
+ .first-modal, .second-modal{
     display: none !important;
 }
-.first-modal, .second-modal{
+.first-modal{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(167, 167, 167, 0.692);
-    border: 0.5px rgba(211, 207, 207, 0.705) solid;
+    background-color: rgb(167, 167, 167);
+    border: 0.5px rgb(211, 207, 207) solid;
     border-radius: 10%;
     width: 250px;
     height: 250px;
     text-align: center;
     padding: 0.5rem;
-    z-index: 1455;
+    box-sizing: border-box;
+    z-index: 6853;
+}
+.second-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(167, 167, 167);
+    border: 0.5px rgb(211, 207, 207) solid;
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
 }
 
 .exit-btn{
-margin: 0;
-padding: 10px 20px;
+margin: 0.2rem 0;
+padding: 7px 10px;
 color: rgb(110, 107, 107);
 border-radius: 50px;
-right: 0;
 border: none;
 }
 .exit-btn:hover{
-  color: rgba(122, 112, 112, 0.822);
+  color: rgb(221, 218, 218);
   cursor: pointer;
+  background-color: rgb(155, 145, 145);
 }
 
-.btn-modal-1st, .btn-modal-2nd{
-    margin: 0.5rem 0 1rem 0;
+.btn-modal-1st, .not-yet{
+    margin: 1.3rem 0;
 }
 .header1, .header2{
-    margin-top: 0;
+    margin-top: 0.6rem;
     color: white;
 }
 
-.some-text1, .some-text2{
+.some-text1{
     color: white;
     margin: 2rem;
 }
-
-.btn-modal-1st, .btn-modal-2nd{
+.some-text2{
+    color: white;
+    margin: 2rem;
+}
+.btn-modal-2nd{
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    margin: auto 0.5rem;
+    cursor: pointer;
+}
+.btn-modal-1st, .not-yet{
     border: none;
     border-radius: 50px;
     padding: 10px;
@@ -101,6 +126,6 @@ border: none;
 
 }
 .btn-modal-1st:hover, 
-.btn-modal-2nd:hover{
+.not-yet:hover, .btn-modal-2nd:hover{
     background-color: rgba(148, 148, 170, 0.712);
 }
