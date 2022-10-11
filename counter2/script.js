@@ -7,7 +7,7 @@ let reset = document.querySelector(".reset");
 
 let count = 0;
 
-//event listeners and arrow functions
+//event listeners and arrow functions - easy way
 increase.addEventListener("click", () => {
   count++;
   displayNumber.innerHTML = count;
