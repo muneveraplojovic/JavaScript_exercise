@@ -23,6 +23,26 @@ body{
     display: flex;
     flex-direction: column;
 }
+.hidden_box{
+        margin: auto;
+        padding: auto;
+        box-sizing: border-box;
+        background-color: rgb(147, 199, 182);
+        color: aliceblue;
+        border-radius: 20px;
+        border: none;
+        width: 300px;
+        height: 210px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
 input, button{
     width: 50%;
     align-items: center;
