@@ -16,7 +16,9 @@
     <button id="+">+</button>
     <button id="reset">reset</button>
     <button id="-">-</button> -->
-<button id="display_modal">Show modal</button>
+
+
+<!-- <button id="display_modal">Show modal</button>
 
     <div class="first_page">
         <h1>prva strana</h1>
@@ -33,6 +35,22 @@
     <div class="last_page">
         <p>Congratss, you did it!!!</p>
         <button id="get_back">Back to start</button>
+    </div> -->
+    <div class="holder">
+        <h1>BODY MASS INDEX (BMI) Calculator</h1>
+        <form>
+            <div class="form-item">
+                <label for="height">Height in cm</label>
+                <input type="text" name="height" id="height" minlength="2" maxlength="3">
+            </div>
+            <div class="form-item">
+                <label for="height">Weight in kg</label>
+                <input type="text" name="weight" id="weight"  minlength="1" maxlength="3">
+            </div>
+            <button class="btn calculate">CALCULATE</button>
+            <button class="btn reset">RESET</button>
+        </form>
+        <div class="result-message"></div>
     </div>
     <script src="script.js"></script>
 </body>
