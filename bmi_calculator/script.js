@@ -128,3 +128,13 @@ let outputMessage = document.querySelector('.result-message');
 // btnCalculate.addEventListener('click', calculateBMI);
 
 // btnReset.addEventListener('click', reloadPage);
+
+import React from 'react'
+
+function script() {
+  return (
+    <div>script</div>
+  )
+}
+
+export default script
