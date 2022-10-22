@@ -95,12 +95,12 @@
 
 // })
 
-// Elements
-let btnCalculate = document.querySelector('.calculate');
-let btnReset = document.querySelector('.reset');
-let outputMessage = document.querySelector('.result-message');
+// // Elements
+// let btnCalculate = document.querySelector('.calculate');
+// let btnReset = document.querySelector('.reset');
+// let outputMessage = document.querySelector('.result-message');
 
-// // Functions
+// // // Functions
 // function calculateBMI(event) {
 //     let height = document.getElementById('height').value;
 //     let weight = document.getElementById('weight').value;
@@ -129,12 +129,3 @@ let outputMessage = document.querySelector('.result-message');
 
 // btnReset.addEventListener('click', reloadPage);
 
-import React from 'react'
-
-function script() {
-  return (
-    <div>script</div>
-  )
-}
-
-export default script
