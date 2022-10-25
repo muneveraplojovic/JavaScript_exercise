@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form autocomplete="off">
+            <div class="form-item">
+                <input type="text" name="name" id="name" placeholder="Name*">
+                <p class="error error-name"></p>
+            </div>
+            <div class="form-item">
+                <input type="text" name="last-name" id="last-name" placeholder="Last Name*">
+                <p class="error error-last-name"></p>
+            </div>
+            <div class="form-item">
+                <input type="email" name="email" id="email" placeholder="Email*">
+                <p class="error error-email"></p>
+            </div>
+            <div class="form-item">
+                <input type="tel" name="phone" id="phone" placeholder="Phone number">
+                <p class="error error-phone"></p>
+            </div>
+            <div class="form-item">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message*"></textarea>
+                <p class="error error-message"></p>
+            </div>
+            <p class="error error-main"></p>
+        </form>
+        <div class="submit-btn">
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
