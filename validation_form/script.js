@@ -21,40 +21,29 @@ let validName = /[\d]/;
 btnSubmit.addEventListener('click', function (e) {
     e.preventDefault();
 
-    let nameValue = firstName.value;
-    let lastNameValue = lastName.value;
-    let emailValue = email.value;
-    let phoneValue = phone.value;
-    let messageValue = message.value;
+//     let nameValue = firstName.value;
+//     let lastNameValue = lastName.value;
+//     let emailValue = email.value;
+//     let phoneValue = phone.value;
+//     let messageValue = message.value;
 
-    if (nameValue === '' || lastNameValue === '' || emailValue === '') {
-        errorMain.textContent = 'Please fill required field / s.';
-    }
-    if (nameValue === '' || nameValue.match(validName)) {
-        errorName.textContent = 'Please enter your name.';
-    }
-    if (lastNameValue === '' || lastNameValue.match(validName)) {
-        errorLastName.textContent = 'Please enter your last name.';
-    }
-    if (emailValue === '' || !emailValue.includes('@') || !emailValue.includes('.')) {
-        errorEmail.textContent = 'Please enter your email.';
-    }
-    if (phoneValue.match(validPhone)) {
-        errorPhone.textContent = 'Please enter your phone corectly.';
-    }
-    if (messageValue === '') {
-        errorMessage.textContent = 'Please enter your message.';
-    }
-});
+//     if (nameValue === '' || lastNameValue === '' || emailValue === '') {
+//         errorMain.textContent = 'Please fill required field / s.';
+//     }
+//     if (nameValue === '' || nameValue.match(validName)) {
+//         errorName.textContent = 'Please enter your name.';
+//     }
+//     if (lastNameValue === '' || lastNameValue.match(validName)) {
+//         errorLastName.textContent = 'Please enter your last name.';
+//     }
+//     if (emailValue === '' || !emailValue.includes('@') || !emailValue.includes('.')) {
+//         errorEmail.textContent = 'Please enter your email.';
+//     }
+//     if (phoneValue.match(validPhone)) {
+//         errorPhone.textContent = 'Please enter your phone corectly.';
+//     }
+//     if (messageValue === '') {
+//         errorMessage.textContent = 'Please enter your message.';
+//     }
+// });
 
-
-// import React from 'react'
-
-// function script() {
-//   return (
-//     <div>script</div>
-//   )
-// }
-
-// export default 
-// script
