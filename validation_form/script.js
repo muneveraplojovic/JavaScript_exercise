@@ -46,3 +46,15 @@ btnSubmit.addEventListener('click', function (e) {
         errorMessage.textContent = 'Please enter your message.';
     }
 });
+
+
+// import React from 'react'
+
+// function script() {
+//   return (
+//     <div>script</div>
+//   )
+// }
+
+// export default 
+// script
