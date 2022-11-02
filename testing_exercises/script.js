@@ -7,3 +7,13 @@ button.addEventListener("click", ()=>{
     console.log("stisnuli ste dugmee");
     alert("radiiiiii")
 })  
+
+import React from 'react'
+
+function script() {
+  return (
+    <div>script</div>
+  )
+}
+
+export default script
