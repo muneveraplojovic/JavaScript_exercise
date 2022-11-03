@@ -1,19 +1,9 @@
-let button=document.getElementById("btn")
+// let button=document.getElementById("btn")
 
 
 
-button.addEventListener("click", ()=>{
-    document.getElementById("header").innerHTML= "Ovo je sad novi header"
-    console.log("stisnuli ste dugmee");
-    alert("radiiiiii")
-})  
-
-import React from 'react'
-
-function script() {
-  return (
-    <div>script</div>
-  )
-}
-
-export default script
+// button.addEventListener("click", ()=>{
+//     document.getElementById("header").innerHTML= "Ovo je sad novi header"
+//     console.log("stisnuli ste dugmee");
+//     alert("radiiiiii")
+// })  
