@@ -161,18 +161,18 @@
 
 // kako menjamo objekte
 
-// const person={
-//   firstName: "Ahmed",
-//   lastName: "Krkmisevic",
-//   jmbg: 1312003788917
-// }
+const person={
+  firstName: "Ahmed",
+  lastName: "Krkmisevic",
+  jmbg: 1312003788917
+}
 
 // objekti su promenljivi (mutable)
-// const x = person
-// console.log(person);
-// x.firstName = "Muhamed"
-// console.log(x);
-// console.log(person);
+const x = person
+console.log(person);
+x.firstName = "Muhamed"
+console.log(x);
+console.log(person);
 
 // //menja se i kod x i kod person
 // bilo koja promena na x objekat ce takodje promeniti i person objekat
@@ -191,22 +191,22 @@
 // delete - ostavlja rupe i undefind kod nizova - brise i key i value
 // Vrednost u objektu moze biti neki drugi objekat, niz, metoda (funkcija)...num str bool
 
-// const osoba={
-//   firstName: "Ahmed",
-//   lastName: "Krkmisevic",
-//   jmbg: 1312003788917
-// }
+const osoba={
+  firstName: "Ahmed",
+  lastName: "Krkmisevic",
+  jmbg: 1312003788917
+}
 
-// delete osoba.jmbg
-// console.log(osoba);
+delete osoba.jmbg
+console.log(osoba);
 
 // JSON.stringify() metoda nam sluzi za prevodjenje objekata u  json a nakon toga json formata u string. 
 
 
-// const stringObjekta = JSON.stringify(osoba)
+const stringObjekta = JSON.stringify(osoba)
 
-// console.log(stringObjekta);
-// console.log(typeof JSON.parse(stringObjekta))
+console.log(stringObjekta);
+console.log(typeof JSON.parse(stringObjekta))
 
 // parse obrnuta procedura od jsona tj od stringa vraca objekat
 // json.parse - vraca nam objekat iz pos;atog argumenta - ako moze naravno 
