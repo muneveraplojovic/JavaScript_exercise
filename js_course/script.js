@@ -95,21 +95,129 @@
 //   prosek= zbir/duzinaNiza
 // }
 // console.log(prosek);
+// keyword referenca ukazuje na neki objekat
+// ne menja svoju vrednost, nije promenljiva
 
-const student = {
-  ime: "Munevera",
-  prezime: "Plojovic",
-  brojIndexa: 036003,
-  ocene: [10, 9, 8, 10, 8, 9, 7, 8],
-  prosekOcena: function () {
-    let zbirOcena = 0;
-    for (let i in this.ocene) {
-      zbirOcena += this.ocene[i];
-      duzinaNiza = this.ocene.length;
-      prosek = +(zbirOcena / duzinaNiza).toFixed(2);
-    }
-    console.log("Prosek ocena je: ", prosek);
-  },
-};
+// const student = {
+//   ime: "Munevera",
+//   prezime: "Plojovic",
+//   brojIndexa: 036003,
+//   ocene: [10, 9, 8, 10, 8, 9, 7, 8],
+//   //build in metoda - funkcija
+//   prosekOcena: function () {
+//     let zbirOcena = 0;
+//     duzinaNiza = this.ocene.length;
+//     for (let  i of this.ocene) {
+//       zbirOcena += i;
+//     }
+//     prosek = +(zbirOcena / duzinaNiza).toFixed(2);
+//     console.log("Prosek ocena je: ", prosek);
+//   },
+// };
 
-console.log(student.prosekOcena());
+// console.log(student.prosekOcena());
+
+// ------------------------------------------------------------------------------
+
+// const student = {
+//   ime: "Munevera",
+//   prezime: "Plojovic",
+//   brojIndexa: 036003,
+//   ocene: [10, 9, 8, 10, 8, 9, 7, 8],
+//   prosekOcena: function () {
+//     const brojOcena = this.ocene.length;
+//     const suma = this.ocene.reduce(
+//       (prevValue, curValue) => prevValue + curValue
+//     );
+//     const  prosek = suma/brojOcena
+//       return `Prosek trenutnih ocena od ${this.ime} je ${prosek}`
+//   },
+// };
+
+// console.log(student.prosekOcena());
+
+// //rate ration
+// ------------------------------------------------------------------------------
+
+// kod const i  let ne vazi hoisitng jedino kod var odnosno kod func definisane 
+// aplication programming interface - API
+// JSON- JavaScript Object Notation
+// podaci koje dobijamo sa servera - json
+// najcesce se koristi kada se salju podaci sa servera do web stranice
+// sintaksa veoma slicna objektima u js-u. Objekat u Js: 
+
+// const student = {
+//     ime: "Munevera",
+//     prezime: "Plojovic",
+//     brojIndexa: 036003,
+// }
+// JSON sintaksa: 
+
+// const student2 = {
+//   "ime": "Munevera",
+//   "prezime": "Plojovic",
+//   "brojIndexa": 036003,
+// }
+
+// kako menjamo objekte
+
+// const person={
+//   firstName: "Ahmed",
+//   lastName: "Krkmisevic",
+//   jmbg: 1312003788917
+// }
+
+// objekti su promenljivi (mutable)
+// const x = person
+// console.log(person);
+// x.firstName = "Muhamed"
+// console.log(x);
+// console.log(person);
+
+// //menja se i kod x i kod person
+// bilo koja promena na x objekat ce takodje promeniti i person objekat
+// ovo vazi za neprimitivne tipove podataka tj novoj promenljivoj x dodeljujemo referencu na objekat person
+// a ne vrednost
+// identicko izjednacavanje
+
+
+// kako brisemo
+// brisanje svojstva objekta se vrsi uz pomoc delete keyword-a:
+// 1. delete person["jmbg"] - slabo se koristi
+// 2. delete person.jmbg
+
+
+// splice - odakle brise, dokle brise 
+// delete - ostavlja rupe i undefind kod nizova - brise i key i value
+// Vrednost u objektu moze biti neki drugi objekat, niz, metoda (funkcija)...num str bool
+
+// const osoba={
+//   firstName: "Ahmed",
+//   lastName: "Krkmisevic",
+//   jmbg: 1312003788917
+// }
+
+// delete osoba.jmbg
+// console.log(osoba);
+
+// JSON.stringify() metoda nam sluzi za prevodjenje objekata u  json a nakon toga json formata u string. 
+
+
+// const stringObjekta = JSON.stringify(osoba)
+
+// console.log(stringObjekta);
+// console.log(typeof JSON.parse(stringObjekta))
+
+// parse obrnuta procedura od jsona tj od stringa vraca objekat
+// json.parse - vraca nam objekat iz pos;atog argumenta - ako moze naravno 
+
+
+// Domaci zadatak :
+// unutar postojeceg obj dodati nova svojstva:
+// trenutna brzina : 0
+// maksimalna brzina: 260
+// povecanje brzine: (metoda koja uzima jedan argument (brzina vrednost za koliko km se povecala smanjila))
+// smanjenje brzine: (metoda koja uzima jedna vrednost )
+// zavisi koliko se poveca ili smanji prema tome stavljamo funkciju
+
+
