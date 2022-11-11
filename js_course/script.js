@@ -69,11 +69,11 @@
 // console.log(car.name);
 // console.log(car["godiste"]);
 
-// obj takodje mogu sadrzati metode 
+// obj takodje mogu sadrzati metode
 // metode su sadrzane unutar objekta kao definicija funkcije
 
 // const person = {
-//     name: "Amina", 
+//     name: "Amina",
 //     prezime: "N",
 //     jmbg: 1312003788917,
 //     fullName: function(){
@@ -82,7 +82,34 @@
 // }
 // console.log(person.fullName());
 
+// napraviti objekat student koji ce da ima vrednosti po zelji svojstava sledecih:
+// ime, prezime, br indexa, ocene kao niz svih ocene koje student ima u trenutnoj godini,
+// prosek ocena ( funkcija koja na osnovu niza ocena vraca prosek datih ocena)
 
-// napraviti objekat student koji ce da ima vrednosti po zelji svojstava sledecih: 
-// ime, prezime, br indexa, ocene kao niz svih ocene koje student ima u trenutnoj godini, 
-// prosek ocena ( funkcija koja na osnovu niza ocena vraca prosek datih ocena) 
+// niz = [10, 9, 8, 7, 10, 9, 8];
+// let zbir = 0;
+
+// for (var i in niz) {
+//   zbir += niz[i];
+//   duzinaNiza = niz.length;
+//   prosek= zbir/duzinaNiza
+// }
+// console.log(prosek);
+
+const student = {
+  ime: "Munevera",
+  prezime: "Plojovic",
+  brojIndexa: 036003,
+  ocene: [10, 9, 8, 10, 8, 9, 7, 8],
+  prosekOcena: function () {
+    let zbirOcena = 0;
+    for (let i in this.ocene) {
+      zbirOcena += this.ocene[i];
+      duzinaNiza = this.ocene.length;
+      prosek = +(zbirOcena / duzinaNiza).toFixed(2);
+    }
+    console.log("Prosek ocena je: ", prosek);
+  },
+};
+
+console.log(student.prosekOcena());
