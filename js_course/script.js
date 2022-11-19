@@ -223,38 +223,38 @@
 // 3. povecanjeBrzine: (metoda koja uzima jedan argument),
 // 4. smanjenjeBrzine: (metoda koja uzima jedan argument),
 
-const myCar = {
-  id: 1,
-  marka: "Audi",
-  model: "a4",
-  boja: "Crvena",
-  pogon: "prednji",
-  menjac: "automatski",
-  kontakt: [0622222, 02033322],
-  servis: {
-    datum: "04,maj",
-    km: 23000,
-    serviser: "Pasovic",
-  },
-  udaran: true,
-  maxBrzina: 260,
-  trBrzina: 200,
+// const myCar = {
+//   id: 1,
+//   marka: "Audi",
+//   model: "a4",
+//   boja: "Crvena",
+//   pogon: "prednji",
+//   menjac: "automatski",
+//   kontakt: [0622222, 02033322],
+//   servis: {
+//     datum: "04,maj",
+//     km: 23000,
+//     serviser: "Pasovic",
+//   },
+//   udaran: true,
+//   maxBrzina: 260,
+//   trBrzina: 200,
 
-  drive: function (brzina) {
-    if (this.trBrzina + brzina > this.maxBrzina) {
-      return "Ne moze, kupi bolji auto :((";
-    } else {
-      return `Trenutna brzinina iznosi: ${this.trBrzina+=80}`;
-    }
-  },
+//   drive: function (brzina) {
+//     if (this.trBrzina + brzina > this.maxBrzina) {
+//       return "Ne moze, kupi bolji auto :((";
+//     } else {
+//       return `Trenutna brzinina iznosi: ${this.trBrzina+=80}`;
+//     }
+//   },
 
-  brake: function (brzina) {
-    return (`${this.trBrzina -= brzina} koooociii`);
-  },
+//   brake: function (brzina) {
+//     return (`${this.trBrzina -= brzina} koooociii`);
+//   },
 
-  stop: function () {
-    return `${(this.trBrzina = 0)} trenutna brzina`;
-  },
-};
+//   stop: function () {
+//     return `${(this.trBrzina = 0)} trenutna brzina`;
+//   },
+// };
 
-console.log(myCar.drive(80));
+// console.log(myCar.drive(80));
