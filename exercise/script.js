@@ -99,3 +99,86 @@
 // // Ako je argument string "," onda cemo dati string pretvoriti u niz koji je podeljen na elemente koje razdvajaju zarezi.
 // //var niz2 = recenica2.split(",");
 // //console.log(niz2);
+
+
+
+////////////////////////////////
+
+
+// let text = "ABCDEFG"
+// const myArr = Array.from(text);
+// console.log(myArr)
+
+//splice-dodaje ili uklanja onoliko elemenata koliko kazemo i zamenjujemo sa elementima
+
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2, 1, "Lemon", "Kiwi");
+//2 nam je broj od kojeg indeksa uklanjamo
+//1 nam je broj koliko elementa uklanjamo
+//treci argument nam je sa kojim elementima zamenjujemo
+
+//console.log(fruits);
+
+//slice-pravi novi array, koji stavljamo na novu varijablu
+// const iseceni = fruits.slice(0, 1);
+// console.log(iseceni);
+
+//pop-array matoda koja uklanja el sa zadnje pozicije
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.push("Kiwi");
+// console.log(fruits);
+
+//shift-uklanja el sa prve pozicije
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.shift();
+// console.log(fruits);
+
+//unshift
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.unshift("Carry");
+// console.log(fruits);
+
+//push
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.push("Carry");
+// console.log(fruits);
+
+
+//map-pravi promene na nizu, pravi neki novi niz
+//filter-filtrira nam zadate uslove
+//reduce-najcesce se koristi za izracunavanje sume
+
+
+//apply-imamo funkciju unutar objekta i sada mi zelimo tu funkciju da primenimo na neki drugi objekat
+//u tom slucaju koristimo apply-prosledjujemo argumente u nizu
+//call -//- prosledjujemo arg normalno sa zarezima
+
+//palindromi
+//fibonacijev
+
+
+//concat-spaja nizove
+//every- ispituje da li je svak el niza ispunio uslov
+//some-ispituje da li barem jedan el niza ispunio uslov
+//includes
+//keys
+//enteries
+// //sort
+// reverse
+
+
+// split-vraca niz " ", ali odvaja svaku rec zarezom
+// join-vraca iz niza string u vidu , ili and ili -
+
+// JSON javascript objcet notation
+// JSON.stringify
+//obj u json, json u string
+
+// parse- vraca obj ako je to moguce
+
+// bind call aplly
+
+
