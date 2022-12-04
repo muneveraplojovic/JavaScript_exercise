@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(78, 114, 114);
+    color: aliceblue;
+    flex-direction: column;
+    margin: 10% auto;
+    padding: 3rem;
+    box-sizing: border-box;
+    text-align: center;
+}
