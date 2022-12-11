@@ -170,7 +170,7 @@
 // reverse
 
 
-// split-vraca niz " ", ali odvaja svaku rec zarezom
+// split-uklanja ono sto posaljemo kao argument
 // join-vraca iz niza string u vidu , ili and ili -
 
 // JSON javascript objcet notation
@@ -180,5 +180,4 @@
 // parse- vraca obj ako je to moguce
 
 // bind call aplly
-
 
