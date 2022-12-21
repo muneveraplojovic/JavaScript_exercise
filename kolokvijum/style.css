@@ -1,0 +1,16 @@
+header a{
+   float: right;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    background-image: url(background.jpg);
+}
