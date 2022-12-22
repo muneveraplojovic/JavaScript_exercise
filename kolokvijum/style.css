@@ -14,3 +14,10 @@ body{
     max-height: 100vh;
     background-image: url(background.jpg);
 }
+
+h1,p{
+  color: white;
+  position: relative;
+align-items: baseline;
+font: 1em sans-serif;
+empty-cells: show;}
