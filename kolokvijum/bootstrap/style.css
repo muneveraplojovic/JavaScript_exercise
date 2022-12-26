@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: cadetblue;
+}
+
+nav a{
+    color: aliceblue;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    font-size: large;
+}
+
+nav a:hover{
+    color: chartreuse;
+    background-color: rgb(64, 109, 110);
+}
+
+#actions{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 12px;
+
+}
+
+nav button{
+    border-radius: 10px;
+    padding: 6px 15px;
+    background-color: chartreuse;
+    border: none;
+    color: rgb(121, 124, 128);
+    cursor: pointer;
+}
+nav button:hover{
+    background-color: rgba(141, 175, 104, 0.705);
+}
