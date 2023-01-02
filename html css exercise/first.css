@@ -1,0 +1,37 @@
+/* centriranje uz pomoc flex-a
+ukoliko uklonimo relative postion sa parenta, onda se div centrira na osnovu body-ja*/
+/* 
+.parent{
+    width: 100%;
+    height: 90px;
+    border: solid 3px green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    border: 3px solid red;
+    width:10% ;
+    text-align: center;
+} */
+
+/*postion css */
+    
+        .parent{
+            width: 100%;
+            height: 90px;
+            border: solid 3px green;
+            position: relative;
+        }
+        
+        .child{
+            border: 3px solid red;
+            width:30% ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 10px;
+        }

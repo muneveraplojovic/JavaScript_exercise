@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .item p {
+    padding-left: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .flex-container {
+    border: 10px solid rgb(240, 255, 34);
+  }
+  
+  .flex-item-1 {
+    background: rgb(243, 20, 20);
+  }
+  
+  .flex-item-2 {
+    background: rgb(9, 160, 9);
+  }
+  
+  .flex-item-3 {
+    background: rgb(21, 21, 211);
+    order: 1;
+  }
+  
+  .flex-item-4 {
+    background: rgb(105, 152, 240);
+  }
