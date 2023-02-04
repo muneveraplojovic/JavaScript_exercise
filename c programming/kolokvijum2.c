@@ -68,28 +68,80 @@
 // #include <stdio.h>
 // #include <math.h>
 
-double Stranica(double x1, double x2, double y1, double y2){
-    return(sqrt(pow(x1-x2, 2) + pow(y1-y2,2 )));
-}
+// double Stranica(double x1, double x2, double y1, double y2){
+//     return(sqrt(pow(x1-x2, 2) + pow(y1-y2,2 )));
+// }
 
 
- main(){
-    double xa, xb, xc,ya,yb,yc,a,b,c,s,p;
+//  main(){
+//     double xa, xb, xc,ya,yb,yc,a,b,c,s,p;
     
-    printf("xa, ya koordinate: \n"); 
-    scanf("%lf%lf", &xa,&ya);
+//     printf("xa, ya koordinate: \n"); 
+//     scanf("%lf%lf", &xa,&ya);
     
-    printf("xb, yb koordinate: \n");
-    scanf("%lf%lf", &xb,&yb);
+//     printf("xb, yb koordinate: \n");
+//     scanf("%lf%lf", &xb,&yb);
     
-    printf("xc, yc koordinate: \n");
-    scanf("%lf%lf", &xc,&yc);
+//     printf("xc, yc koordinate: \n");
+//     scanf("%lf%lf", &xc,&yc);
     
-    a=Stranica(xb,xc,yb,yc);
-    b=Stranica(xc,xa,yc,ya);
-    c=Stranica(xa,xb,ya,yb);
-    s=(a+b+c)/2;
-    p=sqrt(s*(s-a)*(s-b)*(s-c));
-    printf("\nPovrsina trougla iznosi: %.2f\n", p);
-    return 0;
-}
+//     a=Stranica(xb,xc,yb,yc);
+//     b=Stranica(xc,xa,yc,ya);
+//     c=Stranica(xa,xb,ya,yb);
+//     s=(a+b+c)/2;
+//     p=sqrt(s*(s-a)*(s-b)*(s-c));
+//     printf("\nPovrsina trougla iznosi: %.2f\n", p);
+//     return 0;
+// }
+
+///////////////
+
+
+/******************************************************************************
+
+Learning the theory of the Programming language C...
+
+*******************************************************************************/
+// #include <stdio.h>
+
+// int main()
+// {
+//     int myNumbers[] = {1,2,3,4};
+//     myNumbers[1] = 666;
+//     int i;
+//     for(i=0;i<4;i++) printf("%d\n", myNumbers[i]);
+//     printf("%d", myNumbers[1]);
+//     return 0;
+// }
+
+//matrix
+
+// #include <stdio.h>
+
+// int main() {
+//   int matrix[3][3] = { {1, 4, 2}, {3, 6, 8}, {8, 9, 4} };
+
+//   int i, j;
+//   for (i = 0; i < 3; i++) {
+//     for (j = 0; j < 3; j++) {
+//       printf("%d\n", matrix[i][j]);
+//     }
+//   }
+  
+//   printf("\n%d", matrix[2][1]);
+//   return 0;
+// }
+
+
+
+//string - char
+
+// #include <stdio.h>
+
+// main(){
+//     int i;
+//     char myName[]= "Munevera";
+//     printf("Moje ime je: %s\n", myName);
+//     for(i=0; i<8; i++) printf("%d\n", myName[i]);
+//     return 0;
+// }
