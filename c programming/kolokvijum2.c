@@ -137,11 +137,83 @@ Learning the theory of the Programming language C...
 //string - char
 
 // #include <stdio.h>
+// #include <string.h>
 
 // main(){
 //     int i;
 //     char myName[]= "Munevera";
+    
 //     printf("Moje ime je: %s\n", myName);
-//     for(i=0; i<8; i++) printf("%d\n", myName[i]);
+//     printf("------------\n");
+    
+//     for(i=0; i<8; i++) 
+//         printf("%c\n", myName[i]);
+//     printf("\n-----------------\n");
+    
+//     char alfabet[] = "ABVGDEZIJKLMNOPRSTCUFH";
+//     printf("%d", strlen(alfabet));
+    
+//     printf("\n-------------------\n");
+    
+//     ///////////////////////////////////////////
+    
+//     char fullName[30];
+
+//     printf("Type your full name: \n");
+//     fgets(fullName, sizeof(fullName), stdin);
+
+//     printf("Hello %s", fullName);
 //     return 0;
 // }
+
+//FILE
+
+//FILE *fptr;
+
+// Open a file in writing mode
+//fptr = fopen("filename.txt", "w");
+
+// Write some text to the file
+//fprintf(fptr, "Some text");
+
+// Close the file
+//fclose(fptr);
+
+////////////////////////////////////////////////
+//FILE *fptr;
+
+// Open a file in append mode
+//fptr = fopen("filename.txt", "a");
+
+// Append some text to the file
+//fprintf(fptr, "\nHi everybody!");
+
+// Close the file
+//fclose(fptr);
+
+////////////////////////////////////////////////
+
+//Struktureee
+
+// #include <stdio.h>
+// #include <string.h>
+
+// struct myStructure {
+//   int myNum;
+//   char myLetter;
+//   char myString[30]; // String
+// };
+
+// int main() {
+//   struct myStructure s1;
+
+//   // Assign a value to the string using the strcpy function
+//   strcpy(s1.myString, "Some text more more");
+
+//   // Print the value
+//   printf("My string: %s", s1.myString);
+
+//   return 0;
+// }
+
+
