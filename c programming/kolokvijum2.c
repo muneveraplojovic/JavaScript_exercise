@@ -217,3 +217,384 @@ Learning the theory of the Programming language C...
 // }
 
 
+///////////////////////////////////////
+
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+//#include <stdio.h>
+//#include <stdlib.h>
+
+int main()
+{
+    FILE *fp1, *fp2;
+    int sifra, plasticna, drvo, staklo, cenaPlastike, cenaDrveta, cenaStakla;
+    int brDrvenihVrata = 0;
+    float cena;
+    float minCena = 999999999;
+
+    fp1 = fopen("VRATA.DAT", "r");
+    fp2 = fopen("CENE.DAT", "w");
+
+    printf("Unesite cenu kvadratnog metra plastike: ");
+    scanf("%d", &cenaPlastike);
+    printf("Unesite cenu kvadratnog metra drveta: ");
+    scanf("%d", &cenaDrveta);
+    printf("Unesite cenu kvadratnog metra stakla: ");
+    scanf("%d", &cenaStakla);
+
+    while(fscanf(fp1, "%d%d%d%d", &sifra, &plasticna, &drvo, &staklo) != EOF)
+    {
+        cena = plasticna * cenaPlastike + drvo * cenaDrveta + staklo * cenaStakla;
+        if(drvo == 100)
+        {
+            brDrvenihVrata++;
+        }
+        if(cena < minCena)
+        {
+            minCena = cena;
+        }
+        fprintf(fp2, "%d %.2f\n", sifra, cena);
+    }
+
+    printf("Ukupan broj vrata od 100%% drveta: %d\n", brDrvenihVrata);
+    printf("Cena najjeftinijih vrata: %.2f\n", minCena);
+
+    fclose(fp1);
+    fclose(fp2);
+    return 0;
+}
+
+////////////////////////////////////////
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int max_cars(int cene[], int n, int budzet) {
+//     int i, broj_automobila = 0;
+//     for (i = 0; i < n; i++) {
+//         if (cene[i] <= budzet) {
+//             broj_automobila++;
+//             budzet -= cene[i];
+//         }
+//     }
+//     return broj_automobila;
+// }
+
+// int main() {
+//     int n, budzet, i;
+//     printf("Unesite broj automobila: ");
+//     scanf("%d", &n);
+//     int cene[n];
+//     printf("Unesite cene svih automobila: ");
+//     for (i = 0; i < n; i++) {
+//         scanf("%d", &cene[i]);
+//     }
+//     printf("Unesite budzet: ");
+//     scanf("%d", &budzet);
+//     int rezultat = max_cars(cene, n, budzet);
+//     printf("Korisnik moze da kupi najvise %d automobila sa unetim budzetom.\n", rezultat);
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+
+// #define MAX_SIZE 100
+
+// void intersection(int A[], int B[], int n, int C[], int *len_C) {
+//     int i, j, k = 0;
+
+//     for (i = 0; i < n; i++) {
+//         for (j = 0; j < n; j++) {
+//             if (A[i] == B[j]) {
+//                 int duplicate = 0;
+//                 for (int l = 0; l < k; l++) {
+//                     if (C[l] == A[i]) {
+//                         duplicate = 1;
+//                         break;
+//                     }
+//                 }
+//                 if (!duplicate) {
+//                     C[k] = A[i];
+//                     k++;
+//                 }
+//                 break;
+//             }
+//         }
+//     }
+//     *len_C = k;
+// }
+
+// int main() {
+//     int A[MAX_SIZE], B[MAX_SIZE], C[MAX_SIZE];
+//     int n, len_C;
+
+//     printf("Unesite duzinu niza: ");
+//     scanf("%d", &n);
+
+//     printf("Unesite niz A: ");
+//     for (int i = 0; i < n; i++) {  
+//         scanf("%d", &A[i]);
+//     }
+
+//     printf("Unesite niz B: ");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &B[i]);
+//     }
+
+//     intersection(A, B, n, C, &len_C);
+
+//     printf("Niz preseka je: ");
+//     for (int i = 0; i < len_C; i++) {
+//         printf("%d ", C[i]);
+//     }
+//     printf("\n");
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int najvise_automobila(int *niz, int duzina, int budzet) {
+//     int br_automobila = 0;
+//     for (int i = 0; i < duzina; i++) {
+//         if (budzet >= niz[i]) {
+//             br_automobila++;
+//             budzet -= niz[i];
+//         } else {
+//             break;
+//         }
+//     }
+//     return br_automobila;
+// }
+
+// int main() {
+//     int n, budzet;
+//     int cene[100];
+
+//     printf("Unesite broj automobila: ");
+//     scanf("%d", &n);
+
+//     printf("Unesite cene automobila: ");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &cene[i]);
+//     }
+
+//     printf("Unesite budzet: ");
+//     scanf("%d", &budzet);
+
+//     int br_automobila = najvise_automobila(cene, n, budzet);
+//     printf("Moguce je kupiti najvise %d automobila.\n", br_automobila);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void ispisi_kombinacije(int niz[], int n, int trenutni_indeks, int zbir, int polovina)
+// {
+//     if (zbir > polovina)
+//         return;
+
+//     if (trenutni_indeks == n) {
+//         if (zbir == polovina) {
+//             printf("Uravnotezeni niz: {");
+//             for (int i = 0; i < n; i++)
+//                 printf("%d, ", niz[i]);
+//             printf("\b\b}\n");
+//         }
+//         return;
+//     }
+
+//     ispisi_kombinacije(niz, n, trenutni_indeks + 1, zbir, polovina);
+//     ispisi_kombinacije(niz, n, trenutni_indeks + 1, zbir + niz[trenutni_indeks], polovina);
+// }
+
+// int main(void)
+// {
+//     int n;
+//     printf("Unesite broj elemenata niza: ");
+//     scanf("%d", &n);
+
+//     int niz[n];
+//     int zbir = 0;
+//     printf("Unesite elemente niza: ");
+//     for (int i = 0; i < n; i++) {
+//         scanf("%d", &niz[i]);
+//         zbir += niz[i];
+//     }
+
+//     // if (zbir % 2 != 0) {
+//     //     printf("Nije moguce pronaci uravnotezeni niz.\n");
+//     //     return 1;
+//     // }
+
+//     int polovina = zbir / 2;
+//     ispisi_kombinacije(niz, n, 0, 0, polovina);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void ispisi_kombinacije(int niz[], int n, int trenutni_indeks, int zbir_lijevo)
+// {
+//     int zbir_desno = 0;
+//     for (int i = trenutni_indeks + 1; i < n; i++)
+//         zbir_desno += niz[i];
+
+//     if (zbir_lijevo == zbir_desno) {
+//         printf("Uravnotezeni niz: {");
+//         for (int i = 0; i <= trenutni_indeks; i++)
+//             printf("%d, ", niz[i]);
+//         printf("\b\b}\n");
+//     }
+
+//     if (trenutni_indeks >= n - 1)
+//         return;
+
+//     ispisi_kombinacije(niz, n, trenutni_indeks + 1, zbir_lijevo + niz[trenutni_indeks + 1]);
+// }
+
+// int main(void)
+// {
+//     int n;
+//     printf("Unesite broj elemenata niza: ");
+//     scanf("%d", &n);
+
+//     int niz[n];
+//     printf("Unesite elemente niza: ");
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &niz[i]);
+
+//     ispisi_kombinacije(niz, n, -1, 0);
+
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int ravnoteza(int niz[], int n, int trenutni_indeks)
+// {
+//     int zbir_lijevo = 0;
+//     for (int i = 0; i <= trenutni_indeks; i++)
+//         zbir_lijevo += niz[i];
+
+//     int zbir_desno = 0;
+//     for (int i = trenutni_indeks + 1; i < n; i++)
+//         zbir_desno += niz[i];
+
+//     if (zbir_lijevo == zbir_desno)
+//         return 1;
+//     else
+//         return 0;
+// }
+
+// void ispisi_kombinacije(int niz[], int n, int trenutni_indeks)
+// {
+//     if (trenutni_indeks >= n - 1)
+//         return;
+
+//     if (ravnoteza(niz, n, trenutni_indeks)) {
+//         printf("Uravnotezeni niz: {");
+//         for (int i = 0; i <= trenutni_indeks; i++)
+//             printf("%d, ", niz[i]);
+//         printf("\b\b}\n");
+//     }
+
+//     ispisi_kombinacije(niz, n, trenutni_indeks + 1);
+// }
+
+// int main(void)
+// {
+//     int n;
+//     printf("Unesite broj elemenata niza: ");
+//     scanf("%d", &n);
+
+//     int *niz = malloc(n * sizeof(int));
+//     if (niz == NULL) {
+//         printf("Greska pri alociranju memorije.\n");
+//         return 1;
+//     }
+
+//     printf("Unesite elemente niza: ");
+//     for (int i = 0; i < n; i++)
+//         scanf("%d", &niz[i]);
+
+//     ispisi_kombinacije(niz, n, 0);
+
+//     free(niz);
+//     return 0;
+// }
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+
+void remove_comments(char *str) {
+    int i, j, in_comment = 0;
+    int len = strlen(str);
+    char *result = malloc(len + 1);
+
+    for (i = 0, j = 0; i < len; i++) {
+        if (str[i] == '/' && str[i + 1] == '*') {
+            in_comment = 1;
+            i++;
+        } else if (str[i] == '*' && str[i + 1] == '/') {
+            in_comment = 0;
+            i++;
+        } else if (!in_comment) {
+            result[j++] = str[i];
+        }
+    }
+
+    result[j] = '\0';
+    strcpy(str, result);
+    free(result);
+}
+
+int main(void) {
+    char str[100];
+    printf("Unesite string: ");
+    fgets(str, 100, stdin);
+    remove_comments(str);
+    printf("String bez komentara: %s", str);
+
+    return 0;
+    
+    
+    
+}
+
+
+//#include <stdio.h>
+
+int main(void) {
+    int c, prev = 0;
+    while ((c = getchar()) != EOF) {
+        if (prev == '/' && c == '*') {
+            while (c != '/' || prev != '*') {
+                prev = c;
+                c = getchar();
+            }
+        } else if (prev != '/' || c != '*') {
+            putchar(prev);
+        }
+        prev = c;
+    }
+
+    return 0;
+}
+
