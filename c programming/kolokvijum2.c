@@ -598,3 +598,183 @@ int main(void) {
     return 0;
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+//PRVA ZBRIKA
+
+//FUNKCIJE
+
+
+
+//9.10.
+
+// #include <stdio.h>
+
+long Faktorijal(int n){
+    
+    long i, f=1;
+    for(i=1; i<=n; i++)
+        f*=i;
+        
+    return f;
+}
+
+int main(){
+    
+    int n, k, c;
+    
+    printf("n = "); scanf("%d", &n);
+    printf("k = "); scanf("%d", &k);
+    
+    c = Faktorijal(n)/(Faktorijal(k)*Faktorijal(n-k));
+    
+    printf("c = %d\n", c); 
+    
+    return 0;
+}
+
+
+//9.11
+
+// #include <stdio.h>
+
+long Faktorijal(int n){
+    long i, f=1;
+    for(i=1; i<=n; i++)
+        f*=i;
+        
+    return f;
+}
+
+int main(){
+    
+    int n, s=0, i;
+    
+    printf("n= "); scanf("%d", &n);
+    for(i=1;i<=n;i++)
+        s+=Faktorijal(i);
+    printf("S = %d", s);   
+    
+    
+    
+    return 0;
+}
+
+
+//9.12.
+
+// #include <stdio.h>
+
+long Faktorijal(int n){
+    long i, f=1;
+    for(i=1; i<=n; i++)
+        f*=i;
+        
+    return f;
+}
+
+int main(){
+    int a, b,  c;
+    for(a=1;a<=9;a++)
+        for(b=0;b<=9;b++)
+            for(c=0;c<=9;c++){
+                if((a*100+b*10+c)==(Faktorijal(a)+Faktorijal(b)+Faktorijal(c)))
+                    printf("%d", a*100+b*10+c);
+            }
+    return 0; 
+    
+}
+
+
+//9.21 !!! ISPITNI ZADATAK
+
+// #include <stdio.h>
+// #include <math.h>
+
+float a, b;
+
+float f(float x){
+    return(a*x*fabs(sin(b*x)));
+}
+
+int main(){
+    int n;
+    float x, x1, x2, dx, S, P;
+    
+    printf("a = "); scanf("%f", &a);
+    printf("b = "); scanf("%f", &b);
+    printf("n = "); scanf("%d", &n);
+    printf("pocetak = "); scanf("%f", &x1);
+    printf("kraj = "); scanf("%f", &x2);
+    
+    dx=(x2-x1)/n;
+    
+    S=(f(x1)+f(x2))/2;
+    
+    for(x=x1+dx; x<=x2-dx; x+=dx)
+        S+=f(x);
+        
+    P=S*dx;
+    
+    printf("povrsina = %.4f ", P );
+    
+    return 0;
+    
+}
+
+
+//9.33 REKURZIVNA FUNKCIJA
+
+//#include <stdio.h>
+
+
+int nzd(int n, int m){
+    if(n%m==0) return m;
+    return nzd(m, n%m);
+}
+
+int main(){
+    
+    int n, m, p;
+    printf("Unesite dva cela broja: "); scanf("%d %d", &n, &m);
+    
+    if(n<m){
+        
+    p=n;
+    n=m;
+    m=p;
+    
+    }
+    printf("nzd za %d i %d je %d ", n,m,nzd(n,m));
+    
+    
+    return 0;
+}
+
+
+
+//9.35 REKURZIVNA FUNKCIJA + FIBONACI
+
+//#include <stdio.h>
+
+
+int fib(int n){
+    if((n==0)||(n==1))
+        return 1;
+    else
+        return(fib(n-1)+fib(n-2));
+}
+
+int main(){
+    
+    int n;
+    printf("n= "); scanf("%d", &n);
+    printf("Fibonaci [%d] = %d", n, fib(n-1));
+    
+    return 0;
+}
+
+//////////////////
+
+//NIZOVI
