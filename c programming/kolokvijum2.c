@@ -15,20 +15,17 @@
 //     if(najveci==0) printf("Brojevi su isti.\n");
 //     else printf("\nNajveci je: %d\n", najveci);
 
-
 //     return 0;
 // }
 
-
-//#include <stdio.h>
-
+// #include <stdio.h>
 
 // int ZbirKvadrata(int a, int b){
 //     int i, suma=0;
 //     for(i=a;i<=b;i++){
 //         suma+=i*i;
-        
-//     return suma;    
+
+//     return suma;
 //     }
 // }
 
@@ -64,7 +61,6 @@
 //     return 0;
 // }
 
-
 // #include <stdio.h>
 // #include <math.h>
 
@@ -72,19 +68,18 @@
 //     return(sqrt(pow(x1-x2, 2) + pow(y1-y2,2 )));
 // }
 
-
 //  main(){
 //     double xa, xb, xc,ya,yb,yc,a,b,c,s,p;
-    
-//     printf("xa, ya koordinate: \n"); 
+
+//     printf("xa, ya koordinate: \n");
 //     scanf("%lf%lf", &xa,&ya);
-    
+
 //     printf("xb, yb koordinate: \n");
 //     scanf("%lf%lf", &xb,&yb);
-    
+
 //     printf("xc, yc koordinate: \n");
 //     scanf("%lf%lf", &xc,&yc);
-    
+
 //     a=Stranica(xb,xc,yb,yc);
 //     b=Stranica(xc,xa,yc,ya);
 //     c=Stranica(xa,xb,ya,yb);
@@ -95,7 +90,6 @@
 // }
 
 ///////////////
-
 
 /******************************************************************************
 
@@ -114,7 +108,7 @@ Learning the theory of the Programming language C...
 //     return 0;
 // }
 
-//matrix
+// matrix
 
 // #include <stdio.h>
 
@@ -127,14 +121,12 @@ Learning the theory of the Programming language C...
 //       printf("%d\n", matrix[i][j]);
 //     }
 //   }
-  
+
 //   printf("\n%d", matrix[2][1]);
 //   return 0;
 // }
 
-
-
-//string - char
+// string - char
 
 // #include <stdio.h>
 // #include <string.h>
@@ -142,21 +134,21 @@ Learning the theory of the Programming language C...
 // main(){
 //     int i;
 //     char myName[]= "Munevera";
-    
+
 //     printf("Moje ime je: %s\n", myName);
 //     printf("------------\n");
-    
-//     for(i=0; i<8; i++) 
+
+//     for(i=0; i<8; i++)
 //         printf("%c\n", myName[i]);
 //     printf("\n-----------------\n");
-    
+
 //     char alfabet[] = "ABVGDEZIJKLMNOPRSTCUFH";
 //     printf("%d", strlen(alfabet));
-    
+
 //     printf("\n-------------------\n");
-    
+
 //     ///////////////////////////////////////////
-    
+
 //     char fullName[30];
 
 //     printf("Type your full name: \n");
@@ -166,34 +158,34 @@ Learning the theory of the Programming language C...
 //     return 0;
 // }
 
-//FILE
+// FILE
 
-//FILE *fptr;
+// FILE *fptr;
 
 // Open a file in writing mode
-//fptr = fopen("filename.txt", "w");
+// fptr = fopen("filename.txt", "w");
 
 // Write some text to the file
-//fprintf(fptr, "Some text");
+// fprintf(fptr, "Some text");
 
 // Close the file
-//fclose(fptr);
+// fclose(fptr);
 
 ////////////////////////////////////////////////
-//FILE *fptr;
+// FILE *fptr;
 
 // Open a file in append mode
-//fptr = fopen("filename.txt", "a");
+// fptr = fopen("filename.txt", "a");
 
 // Append some text to the file
-//fprintf(fptr, "\nHi everybody!");
+// fprintf(fptr, "\nHi everybody!");
 
 // Close the file
-//fclose(fptr);
+// fclose(fptr);
 
 ////////////////////////////////////////////////
 
-//Struktureee
+// Struktureee
 
 // #include <stdio.h>
 // #include <string.h>
@@ -216,19 +208,18 @@ Learning the theory of the Programming language C...
 //   return 0;
 // }
 
-
 ///////////////////////////////////////
 
 /******************************************************************************
 
 Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
   C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
   Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
-//#include <stdio.h>
-//#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
 int main()
 {
@@ -248,14 +239,14 @@ int main()
     printf("Unesite cenu kvadratnog metra stakla: ");
     scanf("%d", &cenaStakla);
 
-    while(fscanf(fp1, "%d%d%d%d", &sifra, &plasticna, &drvo, &staklo) != EOF)
+    while (fscanf(fp1, "%d%d%d%d", &sifra, &plasticna, &drvo, &staklo) != EOF)
     {
         cena = plasticna * cenaPlastike + drvo * cenaDrveta + staklo * cenaStakla;
-        if(drvo == 100)
+        if (drvo == 100)
         {
             brDrvenihVrata++;
         }
-        if(cena < minCena)
+        if (cena < minCena)
         {
             minCena = cena;
         }
@@ -271,7 +262,6 @@ int main()
 }
 
 ////////////////////////////////////////
-
 
 // #include <stdio.h>
 // #include <stdlib.h>
@@ -302,7 +292,6 @@ int main()
 //     printf("Korisnik moze da kupi najvise %d automobila sa unetim budzetom.\n", rezultat);
 //     return 0;
 // }
-
 
 // #include <stdio.h>
 
@@ -340,7 +329,7 @@ int main()
 //     scanf("%d", &n);
 
 //     printf("Unesite niz A: ");
-//     for (int i = 0; i < n; i++) {  
+//     for (int i = 0; i < n; i++) {
 //         scanf("%d", &A[i]);
 //     }
 
@@ -482,7 +471,6 @@ int main()
 //     return 0;
 // }
 
-
 // #include <stdio.h>
 // #include <stdlib.h>
 
@@ -539,23 +527,30 @@ int main()
 //     return 0;
 // }
 
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <string.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 
-void remove_comments(char *str) {
+void remove_comments(char *str)
+{
     int i, j, in_comment = 0;
     int len = strlen(str);
     char *result = malloc(len + 1);
 
-    for (i = 0, j = 0; i < len; i++) {
-        if (str[i] == '/' && str[i + 1] == '*') {
+    for (i = 0, j = 0; i < len; i++)
+    {
+        if (str[i] == '/' && str[i + 1] == '*')
+        {
             in_comment = 1;
             i++;
-        } else if (str[i] == '*' && str[i + 1] == '/') {
+        }
+        else if (str[i] == '*' && str[i + 1] == '/')
+        {
             in_comment = 0;
             i++;
-        } else if (!in_comment) {
+        }
+        else if (!in_comment)
+        {
             result[j++] = str[i];
         }
     }
@@ -565,7 +560,8 @@ void remove_comments(char *str) {
     free(result);
 }
 
-int main(void) {
+int main(void)
+{
     char str[100];
     printf("Unesite string: ");
     fgets(str, 100, stdin);
@@ -573,23 +569,25 @@ int main(void) {
     printf("String bez komentara: %s", str);
 
     return 0;
-    
-    
-    
 }
 
+// #include <stdio.h>
 
-//#include <stdio.h>
-
-int main(void) {
+int main(void)
+{
     int c, prev = 0;
-    while ((c = getchar()) != EOF) {
-        if (prev == '/' && c == '*') {
-            while (c != '/' || prev != '*') {
+    while ((c = getchar()) != EOF)
+    {
+        if (prev == '/' && c == '*')
+        {
+            while (c != '/' || prev != '*')
+            {
                 prev = c;
                 c = getchar();
             }
-        } else if (prev != '/' || c != '*') {
+        }
+        else if (prev != '/' || c != '*')
+        {
             putchar(prev);
         }
         prev = c;
@@ -598,183 +596,309 @@ int main(void) {
     return 0;
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////
 
-//PRVA ZBRIKA
+// PRVA ZBRIKA
 
-//FUNKCIJE
+// FUNKCIJE
 
-
-
-//9.10.
+// 9.10.
 
 // #include <stdio.h>
 
-long Faktorijal(int n){
-    
-    long i, f=1;
-    for(i=1; i<=n; i++)
-        f*=i;
-        
+long Faktorijal(int n)
+{
+
+    long i, f = 1;
+    for (i = 1; i <= n; i++)
+        f *= i;
+
     return f;
 }
 
-int main(){
-    
+int main()
+{
+
     int n, k, c;
-    
-    printf("n = "); scanf("%d", &n);
-    printf("k = "); scanf("%d", &k);
-    
-    c = Faktorijal(n)/(Faktorijal(k)*Faktorijal(n-k));
-    
-    printf("c = %d\n", c); 
-    
+
+    printf("n = ");
+    scanf("%d", &n);
+    printf("k = ");
+    scanf("%d", &k);
+
+    c = Faktorijal(n) / (Faktorijal(k) * Faktorijal(n - k));
+
+    printf("c = %d\n", c);
+
     return 0;
 }
 
-
-//9.11
+// 9.11
 
 // #include <stdio.h>
 
-long Faktorijal(int n){
-    long i, f=1;
-    for(i=1; i<=n; i++)
-        f*=i;
-        
+long Faktorijal(int n)
+{
+    long i, f = 1;
+    for (i = 1; i <= n; i++)
+        f *= i;
+
     return f;
 }
 
-int main(){
-    
-    int n, s=0, i;
-    
-    printf("n= "); scanf("%d", &n);
-    for(i=1;i<=n;i++)
-        s+=Faktorijal(i);
-    printf("S = %d", s);   
-    
-    
-    
+int main()
+{
+
+    int n, s = 0, i;
+
+    printf("n= ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+        s += Faktorijal(i);
+    printf("S = %d", s);
+
     return 0;
 }
 
-
-//9.12.
+// 9.12.
 
 // #include <stdio.h>
 
-long Faktorijal(int n){
-    long i, f=1;
-    for(i=1; i<=n; i++)
-        f*=i;
-        
+long Faktorijal(int n)
+{
+    long i, f = 1;
+    for (i = 1; i <= n; i++)
+        f *= i;
+
     return f;
 }
 
-int main(){
-    int a, b,  c;
-    for(a=1;a<=9;a++)
-        for(b=0;b<=9;b++)
-            for(c=0;c<=9;c++){
-                if((a*100+b*10+c)==(Faktorijal(a)+Faktorijal(b)+Faktorijal(c)))
-                    printf("%d", a*100+b*10+c);
+int main()
+{
+    int a, b, c;
+    for (a = 1; a <= 9; a++)
+        for (b = 0; b <= 9; b++)
+            for (c = 0; c <= 9; c++)
+            {
+                if ((a * 100 + b * 10 + c) == (Faktorijal(a) + Faktorijal(b) + Faktorijal(c)))
+                    printf("%d", a * 100 + b * 10 + c);
             }
-    return 0; 
-    
+    return 0;
 }
 
-
-//9.21 !!! ISPITNI ZADATAK
+// 9.21 !!! ISPITNI ZADATAK
 
 // #include <stdio.h>
 // #include <math.h>
 
 float a, b;
 
-float f(float x){
-    return(a*x*fabs(sin(b*x)));
+float f(float x)
+{
+    return (a * x * fabs(sin(b * x)));
 }
 
-int main(){
+int main()
+{
     int n;
     float x, x1, x2, dx, S, P;
-    
-    printf("a = "); scanf("%f", &a);
-    printf("b = "); scanf("%f", &b);
-    printf("n = "); scanf("%d", &n);
-    printf("pocetak = "); scanf("%f", &x1);
-    printf("kraj = "); scanf("%f", &x2);
-    
-    dx=(x2-x1)/n;
-    
-    S=(f(x1)+f(x2))/2;
-    
-    for(x=x1+dx; x<=x2-dx; x+=dx)
-        S+=f(x);
-        
-    P=S*dx;
-    
-    printf("povrsina = %.4f ", P );
-    
+
+    printf("a = ");
+    scanf("%f", &a);
+    printf("b = ");
+    scanf("%f", &b);
+    printf("n = ");
+    scanf("%d", &n);
+    printf("pocetak = ");
+    scanf("%f", &x1);
+    printf("kraj = ");
+    scanf("%f", &x2);
+
+    dx = (x2 - x1) / n;
+
+    S = (f(x1) + f(x2)) / 2;
+
+    for (x = x1 + dx; x <= x2 - dx; x += dx)
+        S += f(x);
+
+    P = S * dx;
+
+    printf("povrsina = %.4f ", P);
+
     return 0;
-    
 }
 
+// 9.33 REKURZIVNA FUNKCIJA
 
-//9.33 REKURZIVNA FUNKCIJA
+// #include <stdio.h>
 
-//#include <stdio.h>
-
-
-int nzd(int n, int m){
-    if(n%m==0) return m;
-    return nzd(m, n%m);
+int nzd(int n, int m)
+{
+    if (n % m == 0)
+        return m;
+    return nzd(m, n % m);
 }
 
-int main(){
-    
+int main()
+{
+
     int n, m, p;
-    printf("Unesite dva cela broja: "); scanf("%d %d", &n, &m);
-    
-    if(n<m){
-        
-    p=n;
-    n=m;
-    m=p;
-    
+    printf("Unesite dva cela broja: ");
+    scanf("%d %d", &n, &m);
+
+    if (n < m)
+    {
+
+        p = n;
+        n = m;
+        m = p;
     }
-    printf("nzd za %d i %d je %d ", n,m,nzd(n,m));
-    
-    
+    printf("nzd za %d i %d je %d ", n, m, nzd(n, m));
+
     return 0;
 }
 
+// 9.35 REKURZIVNA FUNKCIJA + FIBONACI
 
+// #include <stdio.h>
 
-//9.35 REKURZIVNA FUNKCIJA + FIBONACI
-
-//#include <stdio.h>
-
-
-int fib(int n){
-    if((n==0)||(n==1))
+int fib(int n)
+{
+    if ((n == 0) || (n == 1))
         return 1;
     else
-        return(fib(n-1)+fib(n-2));
+        return (fib(n - 1) + fib(n - 2));
 }
 
-int main(){
-    
+int main()
+{
+
     int n;
-    printf("n= "); scanf("%d", &n);
-    printf("Fibonaci [%d] = %d", n, fib(n-1));
-    
+    printf("n= ");
+    scanf("%d", &n);
+    printf("Fibonaci [%d] = %d", n, fib(n - 1));
+
     return 0;
 }
 
 //////////////////
 
-//NIZOVI
+// NIZOVI
+
+// 10.23 OCENE STUDENATA
+
+// #include <stdio.h>
+// #define MAX 100
+
+float Prosek(int x[], int n)
+{
+    int i;
+    float suma = 0;
+    for (i = 0; i < n; i++)
+        suma += x[i];
+    return (suma / n);
+}
+
+float ProsekPolozenih(int x[], int n)
+{
+    int i, j = 0;
+    float suma = 0;
+    for (i = 0; i < n; i++)
+        if (x[i] > 5)
+        {
+            suma += x[i];
+            j++;
+        }
+    return (suma / j);
+}
+
+int BrojPolozenih(int x[], int n)
+{
+    int i, broj = 0;
+    for (i = 0; i < n; i++)
+        if (x[i] > 5)
+            broj++;
+    return broj;
+}
+
+int BrojNepolozenih(int x[], int n)
+{
+    int i, broj = 0;
+    for (i = 0; i < n; i++)
+        if (x[i] == 5)
+            broj++;
+    return broj;
+}
+
+int BrojNadprosecnih(int x[], int y[], int n, float m)
+{
+    int i, j = 0;
+    for (i = 0; i < n; i++)
+    {
+        if (x[i] > m)
+        {
+            y[j] = i;
+            j++;
+        }
+    }
+    return j;
+}
+
+int main()
+{
+
+    int student[MAX], ocena[MAX];
+    int i, n;
+
+    printf("Broj studenata: ");
+    scanf("%d", &n);
+    printf("\nOcene studenata od 5 do 10: \n");
+    for (i = 0; i < n; i++)
+    {
+        printf("Ocena studenta %d je: ", i);
+        scanf("%d", &ocena[i]);
+    }
+    printf("\nUkupno polozenih ispita: %d\n", BrojPolozenih(ocena, n));
+    printf("Ukupno nepolozenih ispita: %d\n", BrojNepolozenih(ocena, n));
+    printf("Prosek ocena na ispitu: %.2f\n", Prosek(ocena, n));
+    printf("Prosek polozenih ispita: %.2f\n", ProsekPolozenih(ocena, n));
+    printf("Iznad proseka: %d\n", BrojNadprosecnih(ocena, student, n, Prosek(ocena, n)));
+
+    return 0;
+}
+
+// 10.24 NIZOVI + FIBONACI
+
+// #include <stdio.h>
+// #define MAX 100
+
+void Fibonaci(int niz[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        if (i < 2)
+            niz[i] = 1;
+        else
+            niz[i] = niz[i - 1] + niz[i - 2];
+}
+
+void PrikazFibonacija(int niz[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("%d  ", niz[i]);
+    }
+}
+
+int main()
+{
+    int niz[MAX], n;
+    printf("Broj fibonacijevih brojeva: ");
+    scanf("%d", &n);
+    printf("\n");
+    Fibonaci(niz, n);
+    PrikazFibonacija(niz, n);
+
+    return 0;
+}
