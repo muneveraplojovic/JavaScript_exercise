@@ -1527,3 +1527,46 @@ return 0;
 
 /////////////////////////////////////////////
 
+
+******************************************************************************/
+ #include <stdio.h>
+ #define MAX 100
+
+int main()
+{
+    int i, n, j, mat[MAX][MAX], ssd = 0, sgd = 0;
+    
+    printf("n= ");
+    scanf("%d", &n);
+    
+    printf("Elementi: \n");
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+            printf("[%d][%d] element matrice: ", i, j);
+            scanf("%d", &mat[i][j]);}}
+
+
+    printf("\nUneta matrica je: \n");
+    for (i = 0; i < n; i++){
+        for (j = 0; j < n; j++){
+        printf(" %d\n", mat[i][j]);
+        printf("\n");}}
+
+
+    printf("Elementi glavne dijagonale su: ");
+    for (i = 0; i < n; i++)
+        printf("%d ", mat[i][i]);
+        sgd+=mat[i][i];
+    printf("Suma glavne dijagonale: %d", sgd);
+
+
+    printf("Elementi sporedne dijagonale su: ");
+    for (i = 0; i < n; i++){
+        printf("%d", mat[i][n-i-1]);
+        ssd+=mat[i][n-i-1];}
+    printf("Suma sporedne dijagonale: %d", ssd);
+
+
+
+    return 0;
+}
