@@ -902,3 +902,628 @@ int main()
 
     return 0;
 }
+
+////////////////////////
+
+// MATRICE
+
+// 11.5
+
+// #include <stdio.h>
+// #define MAX 100
+
+int main()
+{
+    int n, j, mat[MAX][MAX], i, ssd = 0, sgd = 0;
+    printf("n= ");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            printf("[%d][%d] element matrice: ", i, j);
+
+
+    printf("Uneta matrica je:");
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            printf("%d ", mat[i][j])
+
+
+    printf("Elementi glavne dijagonale su: ");
+    for (i = 0; i < n; i++)
+        printf("%d", mat[i][i]);
+        sgd+=mat[i][i];
+    printf("Suma glavne dijagonale: %d", sgd);
+
+
+    printf("Elementi sporedne dijagonale su: ");
+    for (i = 0; i < n; i++)
+        printf("%d", mat[i][n-i-1]);
+        ssd+=mat[i][n-i-1];
+    printf("Suma sporedne dijagonale: %d", ssd);
+
+
+
+    return 0;
+}
+
+
+/////////////////////////
+
+#include <stdio.h>
+// zeko jede kupus ispit
+int main()
+{
+    int i,j,mat[100][100],m,kupus=0,br=0;
+    char a;
+
+
+printf("unesi m");
+scanf("%d",&m);
+
+for(i=0;i<m;i++)
+for(j=0;j<m;j++){
+    scanf("%d",&mat[i][j]);
+}
+ 
+for(i=0;i<m;i++){
+        for(j=0;j<m;j++){
+            printf("%d ",mat[i][j]);
+        }
+        printf("\n");
+    }
+    
+i=0;
+j=0;
+while(a!='k'){
+    a=getchar();
+    
+    if(a=='l'){
+        if(j==0)continue;
+        else{
+            j++;
+            br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }
+    }
+    }
+    if(a=='d'){
+        if(j==m-1)continue;
+        else{
+        j++;
+        br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }
+    }
+    }
+    if(a=='g'){
+        if(i==0)continue;
+        else{
+        i--;
+        br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }    
+    }
+    }
+    if(a=='n'){
+        if(i==m-1)continue;
+        else{
+        i++;
+        br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }
+    }
+    }
+    
+
+}
+printf("\nbroj kupusa je %d i broj skokova je %d",kupus,br);
+return 0;
+}
+
+
+///////////////////////////////////////////////////
+
+#include <stdio.h>
+#define MAX 100
+typedef struct studenti
+{
+ char ime[15];
+ char prezime[20];
+ int ocena;
+} STUDENTI;
+main() 
+{
+ STUDENTI Student[MAX], pom;
+ int n, i, j;
+ printf("\n Unesite broj studenata: ");
+ scanf("%d", &n);
+ for(i=0; i<n; i++)
+ {
+ printf("\n Unesite podatke studenta br.%d:\n", i+1);
+ printf(" Ime: ");
+ scanf("%s", &Student[i].ime);
+ printf(" Prezime: ");
+ scanf("%s", &Student[i].prezime);
+ while(getchar()!='\n');
+ printf(" Ocena: ");
+ scanf("%d", &Student[i].ocena);
+ }
+ for(i=0; i<n-1; i++)
+ for(j=i; j<n; j++)
+ if(Student[i].ocena < Student[j].ocena)
+ {
+ pom=Student[i];
+ Student[i]=Student[j];
+ Student[j]=pom;
+ }
+ printf("\n Sortiran niz:\n");
+ for(i=0; i<n; i++)
+ printf(" %s %s\t%d\n",
+ Student[i].ime, Student[i].prezime, Student[i].ocena);
+ getche();
+ return 0;
+}
+
+
+/////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+#define MAX 100
+typedef struct artikli
+{
+ int barKod;
+ char ime[30];
+ float cena;
+} ARTIKLI;
+main()
+{
+ ARTIKLI artikal[MAX];
+ int i=0;
+ FILE *dato;
+ if((dato=fopen("proizvodi.txt", "r"))==NULL)
+ {
+ printf("\n Greska pri otvaranju datoteke!");
+ exit(1);
+ }
+ printf("\n Proizvodi sa cenom nizom od 500 din:\n");
+ while(1)
+ {
+ fscanf(dato, "%d%s%f",
+ &artikal[i].barKod, &artikal[i].ime, &artikal[i].cena);
+ if(feof(dato)) break;
+ if(artikal[i].cena<500)
+ {
+ printf ("%6d %-15s %4.2f\n",
+ artikal[i].barKod, artikal[i].ime, artikal[i].cena);
+ i++;
+ }
+ }
+ fclose(dato);
+ getche();
+ return 0;
+}
+
+/////////////////////////////////////////////////////
+
+#include <stdio.h>
+#define MAX 100
+typedef struct artikli
+{
+ int barKod;
+ char ime[30];
+ float cena;
+ float PDV;
+} ARTIKLI;
+main()
+{
+ ARTIKLI artikal[MAX];
+ int i=0;
+ FILE *dato1, *dato2;
+ if((dato1=fopen("proizvodiPDV.txt", "r"))==NULL)
+ {
+ printf("\n Greska pri otvaranju datoteke!");
+ exit(1);
+ }
+ if((dato2=fopen("proizvodiPDVNovo.txt", "w"))==NULL)
+ {
+ printf("\n Greska pri otvaranju datoteke!");
+ exit(1);
+ }
+ while(1)
+ {
+ fscanf(dato1, "%d %s %f %f", &artikal[i].barKod, &artikal[i].ime,
+ &artikal[i].cena, &artikal[i].PDV);
+ if(feof(dato1)) break;
+ artikal[i].cena*=(1+artikal[i].PDV);
+ fprintf(dato2, "%5d %-15s %4.2f\n",
+ artikal[i].barKod, artikal[i].ime, artikal[i].cena);
+ i++;
+ }
+ fclose(dato1); fclose(dato2);
+ printf("\n Datoteka je formirana!\n");
+ getche(); return 0;
+}
+
+////////////////////////////////////////////////////
+
+
+typedef struct ucenci
+{
+ char ime[15];
+ char prezime[15];
+ char adresa[15];
+ int razred;
+ int odeljenje;
+} UCENICI;
+main()
+{
+ UCENICI ucenik[MAX];
+ int i, n, x;
+ FILE *dato; 
+if((dato=fopen("ucenik.txt","w"))==NULL)
+ {
+ printf("\n Greska pri otvaranju datoteke!");
+ exit(1);
+ }
+ printf("\n Broj ucenika: ");
+ scanf("%d",&n);
+ for(i=0; i<n; i++)
+ {
+ printf("\n -UCENIK %d-\n",i+1);
+ printf(" Ime: ");
+ scanf("%s", &ucenik[i].ime);
+ printf(" Prezime: ");
+ while(getchar()!='\n');
+ scanf("%s", &ucenik[i].prezime);
+ printf(" Adresa: ");
+ scanf("%s", &ucenik[i].adresa);
+ printf(" Razred: ");
+ scanf("%d",&ucenik[i].razred);
+ printf(" Odeljenje: ");
+ scanf("%d",&ucenik[i].odeljenje);
+ fprintf(dato,"%-15s%-15s%-15s%2d%2d\n",ucenik[i].ime,
+ ucenik[i].prezime, ucenik[i].adresa,
+ ucenik[i].razred, ucenik[i].odeljenje);
+ }
+ fclose(dato);
+ printf("\n\n Datoteka je kreirana.\n");
+ printf("\n Rezred za pretragu: ");
+ scanf("%d",&x);
+ if((dato=fopen("ucenik.txt","r"))==NULL)
+ {
+ printf("\n Greska pri otvaranju datoteke!");
+ exit(1);
+ }
+ printf("\n -Ucenici %d-og razreda-\n", x);
+ for(i=0; i<n; i++)
+ {
+ fscanf(dato, "%s%s%s%d%d",&ucenik[i].ime, &ucenik[i].prezime,
+ &ucenik[i].adresa,&ucenik[i].razred,&ucenik[i].odeljenje);
+ if(ucenik[i].razred==x)
+ printf(" %-10s%-10s%-15s%2d%2d\n",ucenik[i].ime, ucenik[i].prezime,
+ ucenik[i].adresa, ucenik[i].razred, ucenik[i].odeljenje);
+ }
+ fclose(dato);
+ getche();
+ return 0;
+}
+
+
+/////////////////////////////////////////////////////////
+
+#include <stdio.h>
+typedef struct temperature
+{
+ int datum;
+ int m7;
+ int m13;
+ int m19;
+} TEMPERATURE;
+main()
+{
+ TEMPERATURE temp[10];
+ int i, j, uk7=0, uk13=0, uk19=0, pomd;
+ float pr7, pr13, pr19, prdnevna[10], pom;
+ FILE *ulaz, *izlaz;
+ char ime1[20], ime2[20];
+ printf("\n Ime datoteke sa podacima: ");
+ scanf("%s",&ime1);
+ printf(" Ime datoteke za kreiranje: ");
+ scanf("%s",&ime2);
+ if((ulaz=fopen(ime1, "r"))== NULL)
+ {
+ printf("Greska prilikom otvaranja datoteke!\n");
+ return 1;
+ }
+if((izlaz=fopen(ime2, "w"))== NULL)
+ {
+ printf("Greska prilikom otvaranja datoteke!\n");
+ return 1;
+ }
+ /*Citanje podataka iz datoteke*/
+ /*Racunanje ukupnih temperatura u 7h, 13h i 19h i dnevne prosecne temperature*/
+ for(i=0; i<10; i++)
+ {
+ fscanf(ulaz, "%d%d%d%d", &temp[i].datum, &temp[i].m7,
+ &temp[i].m13, &temp[i].m19);
+ uk7+=temp[i].m7;
+ uk13+=temp[i].m13;
+ uk19+=temp[i].m19;
+ prdnevna[i]=(float)(temp[i].m7 + temp[i].m13 + temp[i].m19)/3;
+ }
+ /*Racunjane prosecnih temperatura u 7h, 13h i 19h*/
+ pr7=(float)uk7/10;
+ pr13=(float)uk13/10;
+ pr19=(float)uk19/10;
+ /*Sortiranje prosecnih temperatura od najvise ka najnize*/
+ for(i=0; i<9; i++)
+ for(j=i+1; j<10; j++)
+ if(prdnevna[i] < prdnevna[j])
+ {
+ pom=prdnevna[i];
+ pomd=temp[i].datum;
+ prdnevna[i]=prdnevna[j];
+ temp[i].datum=temp[j].datum;
+ prdnevna[j]=pom;
+ temp[j].datum=pomd;
+ }
+ /*Upis podataka u novokreiranu datoteku*/
+ for(i=0; i<10; i++)
+ fprintf(izlaz, " %02d %.2f\n", temp[i].datum, prdnevna[i]);
+ fclose(ulaz);
+ fclose(izlaz);
+ printf("\n Datoteka je kreirana!\n\n");
+ /*Ispis podataka na ekran*/
+ printf(" Najtopliji dan %02d.avgust sa temperaturom od %.2f stepeni.\n",
+ temp[0].datum, prdnevna[0]);
+ printf(" Najhladniji dan %02d.avgust sa temperaturom od %.2f stepeni.\n",
+ temp[9].datum, prdnevna[9]);
+ printf(" Prosecna temperatura u 07h: %.2f\n", pr7);
+ printf(" Prosecna temperatura u 13h: %.2f\n", pr13);
+ printf(" Prosecna temperatura u 19h: %.2f\n", pr19);
+ getche();
+ return 0;
+}
+
+/////////////////////////////////////////////////////////
+
+
+ //ispit 2019 jul (presek dva niza)
+    #include <stdio.h>
+#define MAX 100
+int main()
+{
+   int j,i,nadjen=0,niz1[MAX],niz2[MAX],p,n;
+   printf("unesi prvi niz");
+   scanf("%d",&n);
+   for(i=0;i<n;i++){
+       scanf("%d",&niz1[i]);
+   }
+    printf("unesi drugi niz");
+   scanf("%d",&p);
+   for(i=0;i<p;i++){
+       scanf("%d",&niz2[i]);
+   }
+   for(i=0;i<n;i++){
+       nadjen=0;
+       for(j=0;j<n;j++)
+       if(niz1[i]==niz2[j]){
+           nadjen=1;
+           break;
+       }
+       if(nadjen==1){
+           printf("\t%d",niz1[i]);
+       }
+   }
+   return 0;
+}
+
+//////////////////////////////////////
+//april 2020
+
+#include <stdio.h>
+
+#define MAX 100
+int funkcija(int niz[],int n,int budzet){
+        float suma=0;
+        int brojac=0;
+        int i,j,k;
+        int pom;
+        
+        
+        for(i=0; i<n-1; i++)
+ for(j=i+1; j<n; j++)
+ if(niz[i] > niz[j])
+ {
+ pom=niz[i];
+ niz[i]=niz[j];
+ niz[j]=pom;
+ } 
+ for(i=0;i<n;i++){
+     suma+=niz[i];
+     if(suma>budzet){
+  break;  }
+     brojac++;
+     
+ 
+ }
+        return brojac;
+    }
+    int main(){
+        int n,i,niz[MAX],budzet;
+        printf("unesi broj cena:");
+        scanf("%d",&n);
+       printf("Unesi niz");
+       for(i=0;i<n;i++){
+           scanf("%d",&niz[i]);
+       }
+       printf("unesi budzet");
+       scanf("%d",&budzet);
+       printf("najveci broj automobila za taj budzet je %d",funkcija(niz,n,budzet));
+       return 0;
+    }
+
+    /////////////////////////////////
+
+//drugi najveci br
+
+    #include <stdio.h>
+
+#define MAX 100
+int funkcija(int niz[],int n,int budzet){
+        float suma=0;
+        int brojac=0;
+        int i,j,k;
+        int pom;
+        
+        
+        for(i=0; i<n-1; i++)
+ for(j=i+1; j<n; j++)
+ if(niz[i] > niz[j])
+ {
+ pom=niz[i];
+ niz[i]=niz[j];
+ niz[j]=pom;
+ } 
+ for(i=0;i<n;i++){
+     suma+=niz[i];
+     if(suma>budzet){
+  break;  }
+     brojac++;
+     
+ 
+ }
+        return brojac;
+    }
+    int main(){
+        int n,i,niz[MAX],budzet;
+        printf("unesi broj cena:");
+        scanf("%d",&n);
+       printf("Unesi niz");
+       for(i=0;i<n;i++){
+           scanf("%d",&niz[i]);
+       }
+       printf("unesi budzet");
+       scanf("%d",&budzet);
+       printf("najveci broj automobila za taj budzet je %d",funkcija(niz,n,budzet));
+       return 0;
+    }
+
+    ////////////////////////////////////
+
+
+    // ispit jul 2021
+{
+int sn=0,sp=0,cifre,n,i,k=0;
+printf("unesi broj");
+scanf("%d",&n);
+while(n>0){
+    cifre=n%10;
+    n/=10;
+    k++;
+    if(k%2==0){
+        sp+=cifre;
+    }
+    else if(k%2!=0){sn+=cifre;}
+}
+if(sp!=sn){
+    printf("broj nije savrsen");
+}
+else if(sp=sn){
+    printf("broj je savrsen");
+}
+
+return 0;
+}
+
+//////////////////////////////////////////////
+
+// ispit jul 2020 
+{
+long sn=0,sp=0,cifre,n,i,k=0,p,proizvod,zbir,zadnjacifra,kraj;
+printf("unesi broj");
+scanf("%ld",&n);
+p=n;
+while(n>0){
+    cifre=n%10;
+    n/=10;
+    k++;
+    if(k%2==0){
+        sp+=cifre;
+    }
+    else if(k%2!=0){sn+=cifre;}
+}
+proizvod=3*sn;
+zbir=proizvod+sp;
+for(i=zbir;i<=zbir+10;i++){
+    if(i%10==0){
+        kraj=i;
+    }
+}
+zadnjacifra=kraj-zbir;
+printf("ceo broj je %ld%ld",p,zadnjacifra);
+return 0;
+}
+
+/////////////////////////////////
+
+// april 2020 ispit
+{
+    int m,n,i,pomocna;
+    float suma=0,koren;
+   while(m<1 || n<1)
+ {
+ printf("\n Unesite m i n: ");
+ scanf("%d%d",&m,&n);
+ }
+ if(n<m){
+     pomocna=n;
+     n=m;
+     m=pomocna;
+ }
+ for(i=m;i<=n;i++){
+     if(i%2!=0){
+         koren=sqrt(i);
+         suma+=koren;
+     }
+ }
+ printf("suma je %f",suma);
+ 
+ return 0;
+}
+
+//////////////////////////////////////////////////////
+
+//ispit dunp niz
+int main()
+{
+int n,i,p;
+float suma1=0,suma2=0;
+printf("unesi n:");
+scanf("%d",&n);
+printf("unesi p:");
+scanf("%d",&p);
+for(i=0;i<n;i++){
+    scanf("%d",&niz[i]);
+}
+for(i=0;i<p;i++){
+    suma1+=niz[i];
+}
+for(i=p+1;i<n;i++){
+    suma2+=niz[i];
+}
+if(suma1==suma2){
+    printf("niz je savrsen");
+}
+else {
+    printf("niz nije savrsen");
+}
+return 0;
+}
+
+/////////////////////////////////////////////
+
