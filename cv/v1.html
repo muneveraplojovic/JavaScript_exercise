@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="id">Rezultat vaseg JS koda je:</p>
+    <script>
+      // alert("Hejjjjj")
+      // document.write("Hello world")
+      // console.log("Hello wold")
+      // document.getElementById("id").innerHTML = "djesiiii";
+
+      //   var a = 5;
+      //   var b = 11;
+      //   console.log("broj a: ", a);
+      //   console.log("broj b: ", b);
+      //   console.log("zbir a i b: ", a + b);
+      //   console.log("razlika a i b: ", a - b);
+      //   console.log("proizvod a i b: ", a * b);
+      //   console.log("kolicnik b i a: ", b / a);
+
+      //   var iznos = Number(prompt("Unesite iznos u dinarima: ", "1267"));
+      //   var n500 = parseInt(iznos / 500);
+      //   var n100 = parseInt((iznos % 500) / 100);
+      //   var n1 = parseInt(iznos % 100);
+      //   console.log(
+      //     "Za trazeni iznos potrebno je " +
+      //       n500 +
+      //       " novcanice od 500, " +
+      //       n100 +
+      //       " novcanice od 100 i " +
+      //       n1 +
+      //       " novcica od 1 dinar"
+      //   );
+
+      //   var brojCasova = Number(prompt("Unesite broj sati: "));
+
+      //   if (isNaN(brojCasova)) {
+      //     document.write("Niste uneli isprevno vrednost.");
+      //   } else if (brojCasova <= 0 || brojCasova > 23) {
+      //     console.log("DOBAR DAN");
+      //   } else {
+      //     if(brojCasova<10){
+      //         document.write("DOBRO JUTRO")
+      //     }else if(brojCasova>=10 && ){}
+
+      //     }
+      //     console.log("DOBAR VECER :)");
+      //   }
+
+      //na osnovu unetog n iscrtava se ne ekranu kvadrat pomocu zvezdica dimenzija n*n, npr n=3
+
+      //   var i, j;
+      //   var n = Number(prompt("Unesite broj redova: "));
+
+      //   var linija = "";
+      //   for (i = 0; i < n; i++) {
+      //     //formirali imaginaran red
+      //     var linija = "";
+      //     for (j = 0; j < n; j++) {
+      //       linija += "   *";
+      //       //dali naredbu sta treba da se ispise u tom redu
+      //     }
+      //     document.write(linija + "<br>");
+      //   }
+
+      //na osnovu unetog n iscrtava se pravougli trougao u z pomoc znaka plus n*n
+      // *
+      // * *
+      // * * *
+
+      //   var i, j;
+      //   var n = Number(prompt("Unesite broj: "));
+
+      //   var linija = "";
+      //   for (i = 0; i < n; i++) {
+      //     //formirali imaginaran red
+      //     var linija = "";
+      //     for (j = 0; j <= i; j++) {
+      //       linija += " +";
+      //       //dali naredbu sta treba da se ispise u tom redu
+      //     }
+      //     document.write(linija + "<br>");
+      //   }
+
+      //   var eps = Number(prompt("Unesite epsilon: "));
+      //   if (!isNaN(eps)) {
+      //     var znak = 1;
+      //     var i = 1;
+      //     var sum = 0;
+
+      //     do {
+      //       var clan = (znak * 1) / i;
+      //       sum += clan;
+      //       znak = -znak;
+      //       i += 2;
+      //     } while (Math.abs(clan >= eps));
+      //     var PI = sum * 4;
+      //     document.write("Pi iznosi: " + PI);
+      //   }
+
+      //funkcijeee
+
+      //generisanje nasumicnog broja
+
+      //   function generisiKartu() {
+      //     var randomBroj = Math.floor(Math.random() * 10) + 1;
+      //     return randomBroj;
+      //   }
+
+      //   function unesiKartu() {
+      //     var karta = prompt("Unesite zamisljenu kartu");
+      //     if (karta == "A") {
+      //       return 1;
+      //     }
+      //     return Number(karta);
+      //   }
+
+      //   function main() {
+      //     var promasaj = 0;
+      //     while (true) {
+      //       var racunar = generisiKartu();
+      //       var korisnik = unesiKartu();
+      //       if (racunar == korisnik) {
+      //         alert("Pogodili ste kartu");
+      //         break;
+      //       } else {
+      //         var razlika = Math.abs(racunar - korisnik);
+      //         alert("Promasili ste kartu za: " + razlika);
+      //         ++promasaj;
+      //       }
+      //     }
+      //     document.write("pogresili ste: " + promasaj + " puta.");
+      //   }
+
+      //   main();
+
+      //fibonacijev niz
+
+      //   function fibonaci(n) {
+      //     if (n == 1 || n == 2) {
+      //       return 1;
+      //       //samo prva dva racunaj kao 1 i 2 a ostale kao n-1
+      //     }
+      //     return fibonaci(n - 1) + fibonaci(n - 2);
+      //   }
+      //   var n = Number(prompt("Unesite koliko zelite el fibonacijevog niza?"));
+      //   for (var i = 1; i <= n; i++) {
+      //     document.write(fibonaci(i) + " ");
+      //   }
+
+      //console.log(Math.random()); genersie broj izmedju 0 i 1
+
+      //izracunavanje faktorijal broja 9
+      // fun fact(n){
+      //if (n ==1) return 1;
+      //return n*faktorijal(n-1);
+
+      //   function faktorijal(n) {
+      //     var broj = 9;
+      //     var faktorijal = 1;
+
+      //     for (i = 1; i <= broj; i++) {
+      //       faktorijal *= i;
+      //     }
+      //     console.log(faktorijal);
+      //   }
+      //   faktorijal();
+
+      //Ispisati datum u vasem gradu pomocu funkcije
+
+      //   (function () {
+      //     const datum = new Date();
+      //     const datum2 = new Date(2000, 8, 21);
+      //     const dan = datum2.getDay();
+      //     const mesec = datum2.getMonth();
+      //     const godina = datum2.getFullYear();
+      //     document.write("Trenutni ddatum je: " + datum + "<br>");
+      //     document.write(
+      //       "Datum rodjenja je: " + dan + " . " + mesec + " . " + godina + "<br>"
+      //     );
+      //   })();
+
+      //ispisati poruku hello sa imenom koje saljemo kao parametar
+
+      //arrow func
+
+      // const ispis = (ime) => {
+      //   document.write("Hello " + ime);
+      // };
+      // ispis("Tarik")
+      // ispis("Dzejlanal")
+
+      //////////////////////////////////
+
+      // druge vezbe
+
+      // function brojDana(mesec) {}
+
+      // function nadjiMesec(mesec) {
+      //   switch (mesec) {
+      //     case 0:
+      //       return "Januar";
+      //     case 1:
+      //       return "Februar";
+      //     case 2:
+      //       return "Mart";
+      //     case 3:
+      //       return "April";
+      //     case 4:
+      //       return "Maj";
+      //     case 5:
+      //       return "Jun";
+      //     case 6:
+      //       return "Jul";
+      //     case 7:
+      //       return "Avgust";
+      //     case 8:
+      //       return "Septembar";
+      //     case 9:
+      //       return "Oktobar";
+      //     case 10:
+      //       return "Novembar";
+      //     case 11:
+      //       return "Decembar";
+      //     default:
+      //       return "Greska!";
+      //   }
+      // }
+
+      // function nadjiMesecPrekoNiza(mesec) {
+      //   const nizMeseci = [
+      //     "Januar",
+      //     "Februar",
+      //     "Mart",
+      //     "April",
+      //     "Maj",
+      //     "Jun",
+      //     "Jul",
+      //     "Avgust",
+      //     "Septembar",
+      //     "Oktobar",
+      //     "Novembar",
+      //     "Decembar",
+      //   ];
+
+      //   return nizMeseci[mesec];
+      // }
+      // //Funkcoja koja vraca koliko mesec ima dana. Ne uzimati u obzir prestupne godine
+
+      // function brojDana(mesec) {
+      //   const nizDana = [31, 28, 31, 30, 21, 30, 21, 21, 30, 21, 30, 31];
+      //   return nizDana[mesec];
+      // }
+
+      ////////////////////
+
+      // Ucitava niz ocena, a zatim ispisuje prosek tog studenta , korisnik unosi broj ocena i ocene
+
+      // document.write("Prosek ocena studenta je: " + izracunajProsek());
+
+      // function izracunajProsek() {
+      //6 10 9 7 9 8 6 5
+      //   const strOcene = prompt("Unesite ocene studenta razdvojene razmakom.");
+      //   const ocene = strOcene.split(" ");
+      //   const duzina = ocene.length;
+
+      //   let s = 0;
+      //   for (let i = 0; i < duzina; i++) {
+      //     const ocena = Number(ocene[i]);
+      //     if (!isNan(ocena) && ocena > 5 && ocena <= 10) {
+      //       s += ocena;
+      //       brojOcena++;
+      //     }
+      //   }
+      //   console.log(ocene.join(","));
+      //   return s / brojOcena;
+      // }
+
+      ////////////////////////
+
+      // uneti niz brojeva i niz imena a zatim ta dva niza sortirati
+
+      // var imena = prompt("Unesite imena za sortiranje. ");
+      // var brojevi = prompt("Unesite brojeve za sortiranje");
+
+      // ispitSortiranjeImena(imena);
+      // ispisSortiranjaBrojeva(brojevi);
+
+      // function ispitSortiranjeImena(strImena) {
+      //   let nizImena = strImena.split(",");
+      //   let sortiranaImena = nizImena.sort();
+
+      //   console.log(nizImena.join(","));
+      //   document.write(sortiranaImena.join(","));
+      // }
+
+      // function ispitSortiranjaBrojeva(strBrojevi) {
+      //   let nizBrojeva = strBrojevi.split(",");
+      //   let sortBrojeva = nizBrojeva.sort((a, b) => {
+      //     return a - b;
+      //   });
+
+      //   document.write(sortBrojeva.join(","));
+      // }
+
+      /*Unesite 5 imena studenata,zatim uklonite
+         1.ime
+         2. poslednje ime
+         3. trece ime
+         4. dodajte na pocetku ime
+         5. na kraju ime
+         6. na trecem mestu ime
+         7. umesto drugog i treceg imena dodati nova 2 imena*/
+
+      //imena moraju da se unose sa razmakom
+
+      // var imena = prompt("Unesite imena: ");
+
+      // let nizImena2 = imena.split(" ");
+      // const poslednjeIme = nizImena2.pop();
+      // console.log(nizImena2.toString());
+      // ////////////////////////////
+      // let nizImena3 = imena.split(" ");
+      // nizImena3.splice(2, 1);
+      // console.log(nizImena3.toString());
+
+      // let nizImena4 = imena.split(" ");
+      // nizImena4.unshift("Ajla");
+      // console.log(nizImena4.toString());
+
+      // let nizImena5 = imena.split(" ");
+      // nizImena5.push("Ajla");
+      // console.log(nizImena5.toString());
+
+      // let nizImena6 = imena.split(" ");
+      // const n6 = nizImena6.splice(2, 0, "Dzejlana");
+      // console.log(n6.toString());
+
+      // let nizImena7 = imena.split(" ");
+      // const n7 = nizImena7.splice(1, 2, "Dzejlana", "Engin");
+      // console.log(n7.toString());
+
+      /*
+       Array interation
+       -map
+       -filter
+       -reduce - najcesce se koristi za sabiranje sume
+       -some
+       -every
+       -indexOf
+
+        */
+
+      //Unetom nizu brojeva duplirati vrednosti
+
+      // var niz = [5, 3, 11, 27, 55];
+
+      // document.write(niz.map(mojaFunkcija));
+      // document.write("Indeks broja 11 u nizu je: " + niz.indexOf(11));
+      // document.write(
+      //   "Svi brojevi veci od 18 su:  " +
+      //     niz.filter((value, index, array) => {
+      //       return value > 18;
+      //     })
+      // );
+      // document.write("Da li su svi elementi veci od 18: " + niz.every(uporedi));
+      // document.write("Da li je bar neki veci od 18: " + niz.some(uporedi));
+
+      // function uporedi() {}
+      // function mojaFunkcija(value, index, array) {}
+
+      //Rad sa objektima 2 automobila ispisati koji je stariji
+
+      // let automobil = {
+      //   marka: "Mercedes",
+      //   oznaka: "C220",
+      //   godiste: 2010,
+      // };
+      // let automobil2 = {
+      //   marka: "Passat",
+      //   oznaka: "VW",
+      //   godiste: 2015,
+      // };
+
+      // const nizObjekata = [automobil, automobil2];
+      // nizObjekata.sort((a, b) => {
+      //   a.godiste - b.godiste;
+      // });
+      // document.write(
+      //   nizObjekata[0].marka + " " + nizObjekata[0].oznaka + "<br>"
+      // );
+
+      // if (automobil.godiste > automobil2.godiste) {
+      //   document.write("Drugi je stariji");
+      // } else {
+      //   document.write("Prvi je stariji");
+      // }
+
+      /////////////////////////
+
+      //student
+
+      // class Student {
+      //   constructor(i, p, bi) {
+      //     // this.marka = m;
+      //     // this.oznaka = o;
+      //     // this.godiste = g;
+
+      //     this.ime = i;
+      //     this.prezime = p;
+      //     this.brojIndeksa = bi;
+      //     this.ocene = [];
+      //   }
+      //   predstaviSe = function () {
+      //     document.write("<br>");
+      //     document.write(
+      //       "Ja sam student " +
+      //         this.ime +
+      //         " " +
+      //         this.prezime +
+      //         "Moj broj indeksa je: " +
+      //         this.brojIndeksa
+      //     );
+      //   };
+      //   prosek = function () {
+      //     let s = 0;
+      //     for (let i = 0; i < this.ocene.lenght; i++) {
+      //       s += Number(this.ocene[i]);
+
+      //       return s / this.ocene.lenght;
+      //     }
+      //   };
+      // }
+      // const ime = prompt("Unesite ime studenta:");
+      // const prezime = prompt("Unesite prezime");
+      // const brojIndeksa = prompt("Unesite broj indeksa");
+      // const strOcene = prompt("Unesite ocene studenta razdvojene zarezom");
+
+      // let student = new Student(ime, prezime, brojIndeksa);
+
+      // student.ocene = strOcene.split(",");
+
+      // student.predstaviSe();
+      // console.log(student.prosek());
+      //let o = new Student();
+      //let obj1= new Automobil("Mercedes", "c2020", "2010")
+
+      //set, get, nasledjivanje
+
+      ///krug
+
+      class Krug {
+        constructor(r) {
+          this.poluprecnik = r;
+        }
+        obim() {
+          return 2 * this.poluprecnik * Math.PI;
+        }
+        povrsina() {
+          return Math.pow(this.poluprecnik, 2);
+        }
+      }
+
+      class Valjak extends Krug {
+        constructor(r, h) {
+          super(r);
+          this.visina = h;
+        }
+        povrsina() {
+          return 2 * super.povrsina() + this.obim() * this.visina;
+        }
+        zapremina() {
+          return super.povrsina() * this.visina;
+        }
+      }
+      const k = new Krug(2.5);
+      const v = new Valjak(3.1, 10.5);
+
+
+      console.log();
+    </script>
+  </body>
+</html>
